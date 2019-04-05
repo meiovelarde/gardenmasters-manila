@@ -34,21 +34,31 @@
 <body>
 	<!-- Primary Page Layout
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<header id="header" class="web">
+	<header class="web">
 		<div class="header_main global_flex-center">
-			<nav id="nav" class="nav--web global_highlight-none global_flex-center">
+			<nav class="nav--wrapper global_highlight-none global_flex-center">
 				<div class="nav_main global_flex-center">
-					<div class="nav_main--container global_flex-center">
-						<a href=""> <span class="nav__text"> CLIENTS </span> </a>
-						<a href=""> <span class="nav__text"> SERVICES </span> </a>
-						<a href=""> <span class="nav__text"> CONTACT </span> </a>
+					<div class="nav_logo global_flex-center">
+						<img src="images/logo_trans.png">
+						<span class="logo_text">
+							GARDENMASTERS MANILA
+						</span>
 					</div>
-				</div>
-				<div class="nav_logo global_flex-center">
-					<img src="images/logo_trans.png">
-					<span class="logo_text">
-						GARDENMASTERS MANILA
-					</span>
+
+					<div class="nav_main-container global_flex-center">
+						<a href="" class="global_flex-center">
+							<i class="fas fa-user-friends"></i>
+							<span class="nav__text"> clients </span>
+						</a>
+						<a href="" class="global_flex-center">
+							<i class="fas fa-people-carry"></i>
+							<span class="nav__text"> services </span>
+						</a>
+						<a href="" class="global_flex-center">
+							<i class="fas fa-file-signature"></i>
+							<span class="nav__text"> request a quote
+							</span> </a>
+					</div>
 				</div>
 				<div class="nav_connect global_flex-center">
 					<a href="https://www.facebook.com" class="facebook" target="_blank">
@@ -58,14 +68,73 @@
 					<a href="mailto:hello@gardenmasters.ph" class="email" target="_blank">
 						<i class="fas fa-envelope nav___icon"></i>
 					</a>
-
-					<!-- <a href="tel:+63-915-358-3865" class="phone" target="_blank">
-						<i class="fas fa-phone nav___icon"></i>
-					</a> -->
 				</div>
 			</nav>
 		</div>
 	</header>
+
+	<header class="mobile">
+		<div class="header_main global_flex-center">
+			<nav class="nav--wrapper global_highlight-none global_flex-center">
+				<div class="nav_main global_flex-center">
+					<div class="nav_logo global_flex-center">
+						<img src="images/logo_trans.png">
+						<span class="logo_text">
+							GARDENMASTERS MANILA
+						</span>
+					</div>
+				</div>
+
+				<div class="nav_menu">
+					<div class="nav_burger">
+						<div class="nav_burger--inner">
+						</div>
+					</div>
+					<span class="nav_text menu">
+						menu
+					</span>
+
+					<span class="nav_text close">
+						close
+					</span>
+				</div>
+
+			</nav>
+		</div>
+	</header>
+
+	<div class="nav_menu-fullscreen">
+		<nav class="nav_menu--contents">
+			<a href="">
+				<i class="fas fa-user-friends"></i>
+				<span> clients </span>
+			</a>
+			<a href="">
+				<i class="fas fa-people-carry"></i>
+				<span> services </span>
+			</a>
+			<a href="">
+				<i class="fas fa-file-signature"></i>
+				<span> request a quote </span> </a>
+		</nav>
+
+		<nav class="nav_menu--connect">
+			<div class="global_justify-center">
+				<a href="https://www.facebook.com" class="facebook" target="_blank">
+					<i class="fab fa-facebook-f nav___icon"></i>
+				</a>
+
+				<a href="mailto:hello@gardenmasters.ph" class="email" target="_blank">
+					<i class="fas fa-envelope nav___icon"></i>
+				</a>
+			</div>
+		</nav>
+
+		<nav class="nav_menu--numbers global_justify-center">
+			<a href="tel: +632-800-7303" type="phone" target="_blank"><span> Telefax: +632-800-7303 </span></a>
+			<a href="tel: +63915-358-3865" type="phone" target="_blank"><span> Cel: +63915-358-3865 </span></a>
+		</nav>
+	</div>
 
 	<section class="section_landing">
 		<div class="container">
