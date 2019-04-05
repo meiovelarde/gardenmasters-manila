@@ -2,16 +2,22 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .global_highlight-none {
   -webkit-touch-callout: none;
+
   /* iOS Safari */
   -webkit-user-select: none;
+
   /* Safari */
   -khtml-user-select: none;
+
   /* Konqueror HTML */
   -moz-user-select: none;
+
   /* Firefox */
   -ms-user-select: none;
+
   /* Internet Explorer/Edge */
   user-select: none;
+
   /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
@@ -22,6 +28,7 @@
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 /* Items in the header with shared styles */
 .nav_main {
   justify-content: flex-start;
@@ -44,8 +51,8 @@ a {
   transition: none;
 }
 
-a:hover{
-  transition: color .2s ease;
+a:hover {
+  transition: color 0.2s ease;
 }
 
 /* Unique styles */
@@ -87,7 +94,7 @@ a:hover{
 }
 
 .nav_main a:hover {
-  color: #2CA35C;
+  color: #2ca35c;
 }
 
 /* Web nav - Logo */
@@ -103,14 +110,14 @@ a:hover{
   margin-left: 8px;
   opacity: 1;
   overflow: hidden;
-  transition: opacity .5s ease;
+  transition: opacity 0.5s ease;
   white-space: nowrap;
   width: 31.6rem;
 }
 
 .logo_text--closed {
   opacity: 0;
-  transition: opacity .5s ease, width .5s;
+  transition: opacity 0.5s ease, width 0.5s;
   width: 0;
 }
 
@@ -142,21 +149,21 @@ a:hover{
 }
 
 .facebook:hover {
-  color: #4267B2;
+  color: #4267b2;
 }
 
 .email:hover {
-  color: #34A762;
+  color: #34a762;
 }
 
 .phone:hover {
-  color: #DA472A;
+  color: #da472a;
 }
 
 /* Site Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section_landing {
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
   height: 900px;
   padding-top: 70px; /* csslint allow: box-model */
   width: 100%;
@@ -164,13 +171,17 @@ a:hover{
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 /*
 Note: The best way to structure the use of media queries is to create the queries
 near the relevant code. For example, if you wanted to change the styles for buttons
 on small devices, paste the mobile query code up in the buttons section and style it
 there.
 */
+
 /* Larger than mobile */
+
+/* stylelint-disable */
 @media (min-width: 400px) {}
 
 /* Larger than phone/tablet (also point when grid becomes active) */
@@ -184,3 +195,5 @@ there.
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+/* stylelint-enable */

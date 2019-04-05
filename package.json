@@ -13,8 +13,8 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
-    "csslint": "^1.0.5",
     "eslint": "^5.16.0",
-    "htmlhint": "^0.11.0"
+    "htmlhint": "^0.11.0",
+    "stylelint": "^9.10.1"
   }
 }
