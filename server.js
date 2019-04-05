@@ -9,5 +9,6 @@ app.get('/', function (req, res) {
 });
 
 server.listen(8081, function () {
+  // eslint-disable-next-line no-console
   console.log(`Listening on ${server.address().port}`);
 });

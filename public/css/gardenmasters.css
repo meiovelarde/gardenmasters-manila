@@ -1,0 +1,186 @@
+/* Global Values
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.global_highlight-none {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.global_flex-center {
+  align-items: center;
+  display: flex;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* Items in the header with shared styles */
+.nav_main {
+  justify-content: flex-start;
+  width: 28%;
+}
+
+.nav_logo {
+  justify-content: center;
+  width: 44%;
+}
+
+.nav_connect {
+  justify-content: flex-end;
+  width: 28%;
+}
+
+a {
+  color: #141414;
+  text-decoration: none;
+  transition: none;
+}
+
+a:hover{
+  transition: color .2s ease;
+}
+
+/* Unique styles */
+.web {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.header_main {
+  height: 70px;
+  margin-left: 3%;
+  margin-right: 3%;
+  position: relative;
+  width: 94%;
+}
+
+.nav--web {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav__popout--icon {
+  padding-right: 8px;
+}
+
+/* Web nav - Left */
+.nav_main .nav__text {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-right: 15px;
+}
+
+.nav__popout--menu {
+  font-weight: 600;
+  margin-right: 28px;
+  padding-left: 4px;
+}
+
+.nav_main a:hover {
+  color: #2CA35C;
+}
+
+/* Web nav - Logo */
+.nav_logo img {
+  height: 36px;
+}
+
+.logo_text,
+.logo_text--closed {
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-left: 8px;
+  opacity: 1;
+  overflow: hidden;
+  transition: opacity .5s ease;
+  white-space: nowrap;
+  width: 31.6rem;
+}
+
+.logo_text--closed {
+  opacity: 0;
+  transition: opacity .5s ease, width .5s;
+  width: 0;
+}
+
+/* Web nav - Right */
+.nav_connect .fa-circle-notch {
+  font-size: 1.35rem;
+}
+
+.nav__popout--connect {
+  font-weight: 600;
+  margin-right: 28px;
+  padding-left: 4px;
+}
+
+.nav___icon {
+  padding-right: 15px;
+}
+
+.email .nav___icon {
+  padding-right: 13px;
+}
+
+.email {
+  font-size: 1.8rem;
+}
+
+.phone {
+  font-size: 1.4rem;
+}
+
+.facebook:hover {
+  color: #4267B2;
+}
+
+.email:hover {
+  color: #34A762;
+}
+
+.phone:hover {
+  color: #DA472A;
+}
+
+/* Site Sections
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section_landing {
+  background-color: #EBEBEB;
+  height: 900px;
+  padding-top: 70px; /* csslint allow: box-model */
+  width: 100%;
+}
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: The best way to structure the use of media queries is to create the queries
+near the relevant code. For example, if you wanted to change the styles for buttons
+on small devices, paste the mobile query code up in the buttons section and style it
+there.
+*/
+/* Larger than mobile */
+@media (min-width: 400px) {}
+
+/* Larger than phone/tablet (also point when grid becomes active) */
+@media (min-width: 550px) {}
+
+/* Larger than tablet */
+@media (min-width: 750px) {}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
