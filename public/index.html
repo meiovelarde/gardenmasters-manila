@@ -31,16 +31,20 @@
 
 </head>
 
+<!-- Primary page layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <body>
-	<!-- Primary Page Layout
+	<!-- Web header start
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<header class="web">
 		<div class="header_main global_flex-center">
 			<nav class="nav--wrapper global_highlight-none global_flex-center">
+				<!-- Web Header - Main navigation (Left logo & nav items)
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 				<div class="nav_main global_flex-center">
-					<div class="nav_logo global_flex-center">
-						<img src="images/logo_trans.png">
-						<span class="logo_text">
+					<div class="nav_logo global_flex-center" title="Return to Gardenmasters Manila">
+						<img src="images/logo_trans.png" alt="Gardenmasters Manila, Inc.">
+						<span class="logo__text">
 							GARDENMASTERS MANILA
 						</span>
 					</div>
@@ -60,26 +64,31 @@
 							</span> </a>
 					</div>
 				</div>
+
+				<!-- Web Header - Connect navigation (FB, Mail)
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 				<div class="nav_connect global_flex-center">
 					<a href="https://www.facebook.com" class="facebook" target="_blank">
-						<i class="fab fa-facebook-f nav___icon"></i>
+						<i class="fab fa-facebook-f nav__icon"></i>
 					</a>
 
 					<a href="mailto:hello@gardenmasters.ph" class="email" target="_blank">
-						<i class="fas fa-envelope nav___icon"></i>
+						<i class="fas fa-envelope nav__icon"></i>
 					</a>
 				</div>
 			</nav>
 		</div>
 	</header>
 
+	<!-- Mobile header start
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<header class="mobile">
 		<div class="header_main global_flex-center">
 			<nav class="nav--wrapper global_highlight-none global_flex-center">
 				<div class="nav_main global_flex-center">
-					<div class="nav_logo global_flex-center">
-						<img src="images/logo_trans.png">
-						<span class="logo_text">
+					<div class="nav_logo global_flex-center" title="Return to Gardenmasters Manila">
+						<img src="images/logo_trans.png" alt="Gardenmasters Manila, Inc.">
+						<span class="logo__text">
 							GARDENMASTERS MANILA
 						</span>
 					</div>
@@ -90,11 +99,11 @@
 						<div class="nav_burger--inner">
 						</div>
 					</div>
-					<span class="nav_text menu">
+					<span class="nav__text menu">
 						menu
 					</span>
 
-					<span class="nav_text close">
+					<span class="nav__text close">
 						close
 					</span>
 				</div>
@@ -103,36 +112,37 @@
 		</div>
 	</header>
 
-	<div class="nav_menu-fullscreen">
+	<div class="mobile nav_menu-fullscreen">
 		<nav class="nav_menu--contents">
 			<a href="">
 				<i class="fas fa-user-friends"></i>
-				<span> clients </span>
+				<span class="nav__content-text clients"> clients </span>
 			</a>
 			<a href="">
 				<i class="fas fa-people-carry"></i>
-				<span> services </span>
+				<span class="nav__content-text services"> services </span>
 			</a>
 			<a href="">
 				<i class="fas fa-file-signature"></i>
-				<span> request a quote </span> </a>
+				<span class="nav__content-text quote"> request a quote </span> </a>
 		</nav>
 
 		<nav class="nav_menu--connect">
 			<div class="global_justify-center">
 				<a href="https://www.facebook.com" class="facebook" target="_blank">
-					<i class="fab fa-facebook-f nav___icon"></i>
+					<i class="fab fa-facebook-f nav__icon"></i>
 				</a>
 
 				<a href="mailto:hello@gardenmasters.ph" class="email" target="_blank">
-					<i class="fas fa-envelope nav___icon"></i>
+					<i class="fas fa-envelope nav__icon"></i>
 				</a>
 			</div>
 		</nav>
 
-		<nav class="nav_menu--numbers global_justify-center">
-			<a href="tel: +632-800-7303" type="phone" target="_blank"><span> Telefax: +632-800-7303 </span></a>
-			<a href="tel: +63915-358-3865" type="phone" target="_blank"><span> Cel: +63915-358-3865 </span></a>
+		<nav class="nav_menu--numbers">
+			<a href="tel: +632-800-7303" type="phone" target="_blank"><span> Tel: (+632) 800-7303 </span></a>
+			<a href="tel: +63915-358-3865" type="phone" target="_blank"><span> Cel: (+63915) 358-3865 </span></a>
+			<span class="copyright global_highlight-none"> © Gardenmasters Manila, Inc. </span>
 		</nav>
 	</div>
 
