@@ -1,0 +1,33 @@
+/* Separating all scripted animations in a separate file kasi ang hassle.
+Does not include hover animations.
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+  opacity: 0;
+  transition: opacity .45s 1s ease-out;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+.atf_headline span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px)
+}
+
+body.loaded .atf_headline span:not(.nature) {
+  transition-delay: 1.75s;
+}
+
+body.loaded .nature {
+  transition-delay: 1.3s;
+}
+
+body.loaded .atf_headline span {
+  transition-property: opacity, transform;
+  transition-duration: .45s;
+  transition-timing-function: ease-out;
+  transform: none;
+  opacity: 1;
+}
