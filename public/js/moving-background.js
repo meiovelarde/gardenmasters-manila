@@ -5,7 +5,8 @@ var lFollowX = 0,
   lFollowY = 0,
   x = 0,
   y = 0,
-  friction = 1 / 30;
+  friction = 1 / 30,
+  width = 0;
 const el = document.querySelector(".section_landing");
 let moveBackground = () => {
   x += (lFollowX - x) * friction;
@@ -15,6 +16,7 @@ let moveBackground = () => {
   el.style.backgroundPositionX = x + "px";
   el.style.backgroundPositionY = y + "px";
 
+  width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
   window.requestAnimationFrame(moveBackground);
 }
 
@@ -25,4 +27,9 @@ el.addEventListener("mousemove", (e) => {
   lFollowY = (10 * lMouseY) / 100;
 
 });
-moveBackground();
+if(width > 768)
+  moveBackground();
+else {
+  el.style.backgroundPositionX = null
+  el.style.backgroundPositionY = null
+}

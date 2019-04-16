@@ -21,19 +21,21 @@ function hideLogoText() {
   }
 }
 
-document.querySelector(".nav_menu, .nav_menu--active").onclick = clickMenu;
+document.querySelector(".nav_menu").onclick = clickMenu;
 
 let isMenuActive = false;
 
 function clickMenu() {
   if (!isMenuActive) {
-    document.querySelector(".nav_menu").className = "nav_menu--active"
-    document.querySelector(".nav_menu-fullscreen").className = "mobile nav_menu-fullscreen--active"
+    document.querySelector(".nav_menu").classList.add('active')
+    document.querySelector(".nav_menu-fullscreen").classList.add('active')
+    document.querySelector("header.mobile .header_main").classList.add('active')
     document.querySelector("header.mobile .nav_logo").className = "nav_logo global_display-none"
     isMenuActive = true;
   } else if (isMenuActive) {
-    document.querySelector(".nav_menu--active").className = "nav_menu"
-    document.querySelector(".nav_menu-fullscreen--active").className = "mobile nav_menu-fullscreen"
+    document.querySelector(".nav_menu").classList.remove('active')
+    document.querySelector(".nav_menu-fullscreen").classList.remove('active')
+    document.querySelector("header.mobile .header_main").classList.remove('active')
     document.querySelector("header.mobile .nav_logo").className = "nav_logo global_flex-center"
     isMenuActive = false;
   }
