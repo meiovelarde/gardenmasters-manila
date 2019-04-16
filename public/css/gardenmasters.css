@@ -15,8 +15,8 @@
 }
 
 .global_justify-center {
-  justify-content: center;
   display: flex;
+  justify-content: center;
 }
 
 .global_display-none {
@@ -25,8 +25,8 @@
 
 /* Body */
 body {
-  min-height: 100vh;
   max-width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -34,10 +34,9 @@ section {
   padding: 0 2%;
 }
 
-section div{
+section div {
   max-width: 1100px;
 }
-
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -73,9 +72,9 @@ a:hover {
 .header_main {
   background-color: #ffffff;
   height: 70px;
-  position: relative;
   padding-left: 2.5%;
   padding-right: 2.5%;
+  position: relative;
   width: 95%;
 }
 
@@ -143,15 +142,15 @@ a:hover {
 }
 
 .nav_main .fa-bars {
+  font-size: 1.6rem;
   margin-top: 2px;
   margin-right: 10px;
-  font-size: 1.6rem;
 }
 
 .nav_main-container {
+  opacity: 0;
   overflow: hidden;
   transition: opacity 0.5s ease;
-  opacity: 0;
   white-space: nowrap;
   width: 0;
 }
@@ -162,8 +161,8 @@ a:hover {
 }
 
 .nav_main-container--open {
-  overflow: hidden;
   opacity: 1;
+  overflow: hidden;
   transition: opacity 0.25s ease, width 1.5s 0.25s ease;
   white-space: nowrap;
   width: 100rem;
@@ -375,14 +374,14 @@ header.mobile .logo__text {
 /* Mobile - Nav menu overlay */
 .nav_menu-fullscreen,
 .nav_menu-fullscreen.active {
-  position: fixed;
-  width: 100%;
-  height: 100%;
   background-color: #00c2ac;
-  top: 0;
+  height: 100%;
   left: 0;
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .nav_menu-fullscreen {
@@ -405,6 +404,7 @@ header.mobile .logo__text {
 }
 
 @media (min-width: 400px) {
+
   .nav_menu-fullscreen.active .nav_menu--contents,
   .nav_menu-fullscreen.active .nav_menu--connect,
   .nav_menu-fullscreen.active .nav_menu--numbers {
@@ -414,6 +414,7 @@ header.mobile .logo__text {
 }
 
 @media (min-width: 550px) {
+
   .nav_menu-fullscreen.active .nav_menu--contents,
   .nav_menu-fullscreen.active .nav_menu--connect,
   .nav_menu-fullscreen.active .nav_menu--numbers {
@@ -423,6 +424,7 @@ header.mobile .logo__text {
 }
 
 @media (min-width: 750px) {
+
   .nav_menu-fullscreen.active .nav_menu--contents,
   .nav_menu-fullscreen.active .nav_menu--connect,
   .nav_menu-fullscreen.active .nav_menu--numbers {
@@ -432,6 +434,7 @@ header.mobile .logo__text {
 }
 
 @media (min-width: 1000px) {
+
   .nav_menu-fullscreen.active .nav_menu--contents,
   .nav_menu-fullscreen.active .nav_menu--connect,
   .nav_menu-fullscreen.active .nav_menu--numbers {
@@ -443,22 +446,22 @@ header.mobile .logo__text {
 .nav_menu--contents {
   display: flex;
   flex-direction: column;
+  height: calc(64% - 40px);
   justify-content: space-evenly;
   margin-top: 40px;
-  height: calc(64% - 40px);
 }
 
 .nav_menu--connect,
 .nav_menu--numbers {
-  height: calc(23% - 40px);
   display: flex;
   flex-flow: column;
+  height: calc(23% - 40px);
 }
 
 @media (min-height: 450px) {
   .nav_menu--contents {
-    margin-top: 70px;
     height: calc(64% - 70px);
+    margin-top: 70px;
   }
 
   .nav_menu--connect,
@@ -472,9 +475,9 @@ header.mobile .logo__text {
 }
 
 .nav_menu--numbers {
+  letter-spacing: 1.1px;
   justify-content: flex-start;
   text-align: center;
-  letter-spacing: 1.1px;
 }
 
 .nav_menu-fullscreen.active a,
@@ -506,9 +509,9 @@ header.mobile .logo__text {
 }
 
 .nav_menu-fullscreen .nav__content-text {
-  width: 0;
   opacity: 0;
   transition: none;
+  width: 0;
 }
 
 .nav_menu-fullscreen.active .nav__content-text {
@@ -558,6 +561,7 @@ header.mobile .logo__text {
 }
 
 @media (min-width: 400px) {
+
   .nav_menu--contents,
   .nav_menu--connect a {
     font-size: 2rem;
@@ -566,6 +570,7 @@ header.mobile .logo__text {
 }
 
 @media (min-width: 550px) {
+
   .nav_menu--contents,
   .nav_menu--connect a {
     font-size: 2.35rem;
@@ -580,7 +585,7 @@ header.mobile .logo__text {
 /* Site Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /* Landing page */
-.section_landing {
+.section_atf {
   align-items: center;
   background: linear-gradient(rgba(0, 255, 180, 0.38),
     rgba(200, 215, 50, 0.28)),
@@ -598,8 +603,9 @@ header.mobile .logo__text {
   transition: none;
   transform: none;
 }
+
 @media (min-width: 1281px) {
-  .section_landing{
+  .section_atf {
     transform: scale(1.1);
   }
 }
@@ -619,21 +625,21 @@ header.mobile .logo__text {
   font-weight: 700;
   font-size: 3.6rem;
   letter-spacing: 0.015rem;
-  text-transform: uppercase;
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 
-@media (min-width: 400px){
-.atf_headline h1 {
-  font-size: 4.15rem;
-  margin-bottom: .5rem;
+@media (min-width: 400px) {
+  .atf_headline h1 {
+    font-size: 4.15rem;
+    margin-bottom: .5rem;
   }
 }
 
-@media (min-width: 768px){
-.atf_headline h1 {
-  font-size: 5rem;
-  margin-bottom: 2.5rem;
+@media (min-width: 768px) {
+  .atf_headline h1 {
+    font-size: 5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -644,13 +650,13 @@ header.mobile .logo__text {
   width: 100%;
 }
 
-@media(min-width: 768px)
-  and (orientation: landscape){
+@media(min-width: 768px) and (orientation: landscape) {
   .atf_bottom-hedge img {
     bottom: -18vw;
   }
 }
-@media(orientation: portrait){
+
+@media(orientation: portrait) {
   .atf_bottom-hedge img {
     bottom: -5vh;
   }
@@ -668,8 +674,8 @@ header.mobile .logo__text {
   width: 90%;
 }
 
-@media(min-width: 768px){
-  .atf_button{
+@media(min-width: 768px) {
+  .atf_button {
     margin: 0px 8px;
     width: 150px;
   }
@@ -692,39 +698,37 @@ header.mobile .logo__text {
 }
 
 .atf_button:hover:after {
-  width: 155%;
   height: 100%;
+  width: 155%;
 }
 
 .atf_button:after {
   background-color: #0096ed;
   content: '';
-  position: absolute;
   left: -35%;
+  position: absolute;
   top: 0;
-  width: 0;
   transform: skew(45deg);
   transform-origin: top-left;
   transition: all .45s ease-in-out;
+  width: 0;
   z-index: 1;
 }
 
 .atf_button-set {
+  align-items: center;
   display: flex;
   flex-flow: column;
-  align-items:center;
   justify-content: center;
   z-index: 9999;
 }
 
-@media(min-width: 768px){
-  .atf_button-set{
+@media(min-width: 768px) {
+  .atf_button-set {
     width: 100%;
     flex-flow: row
   }
 }
-
-
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

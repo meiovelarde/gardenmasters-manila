@@ -7,7 +7,7 @@ var lFollowX = 0,
   y = 0,
   friction = 1 / 30,
   width = 0;
-const el = document.querySelector(".section_landing");
+const el = document.querySelector(".section_atf");
 let moveBackground = () => {
   x += (lFollowX - x) * friction;
   y += (lFollowY - y) * friction;
@@ -27,7 +27,7 @@ el.addEventListener("mousemove", (e) => {
   lFollowY = (10 * lMouseY) / 100;
 
 });
-if(width > 768)
+if (width > 768)
   moveBackground();
 else {
   el.style.backgroundPositionX = null
