@@ -7,7 +7,7 @@ var lFollowX = 0,
   y = 0,
   friction = 1 / 30,
   width = 0;
-const el = document.querySelector(".section_atf");
+const el = document.querySelector(".atf");
 let moveBackground = () => {
   x += (lFollowX - x) * friction;
   y += (lFollowY - y) * friction;

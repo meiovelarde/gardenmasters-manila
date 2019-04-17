@@ -10,21 +10,21 @@ body.main.loaded {
   opacity: 1;
 }
 
-.atf_headline span {
+.atf__headline span {
   display: inline-block;
   opacity: 0;
   transform: translateY(8px)
 }
 
-body.loaded .atf_headline span:not(.nature) {
+body.loaded .atf__headline span:not(.atf__headline_nature) {
   transition-delay: 1.75s;
 }
 
-body.loaded .nature {
+body.loaded .atf__headline_nature {
   transition-delay: 1.3s;
 }
 
-body.loaded .atf_headline span {
+body.loaded .atf__headline span {
   transition-property: opacity, transform;
   transition-duration: .45s;
   transition-timing-function: ease-out;
