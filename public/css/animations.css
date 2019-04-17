@@ -1,12 +1,12 @@
 /* Separating all scripted animations in a separate file kasi ang hassle.
 Does not include hover animations.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-body {
+body.main {
   opacity: 0;
   transition: opacity .45s 1s ease-out;
 }
 
-body.loaded {
+body.main.loaded {
   opacity: 1;
 }
 

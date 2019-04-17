@@ -8,6 +8,10 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
+app.get('/clients', function(req, res){
+  res.sendfile(__dirname + '/public/clients.html');
+})
+
 server.listen(8081, function () {
   // eslint-disable-next-line no-console
   console.log(`Listening on ${server.address().port}`);
