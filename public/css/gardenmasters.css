@@ -735,8 +735,8 @@ header.mobile .logo__text {
 
 @media(min-width: 768px) {
   .atf__button-set {
+    flex-flow: row;
     width: 100%;
-    flex-flow: row
   }
 }
 
@@ -774,9 +774,9 @@ header.mobile .logo__text {
 .clients__header_content h3,
 .clients__list_content h3 {
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: .1rem;
   margin-bottom: .5rem;
+  text-transform: uppercase;
 }
 
 /* Clients list */
@@ -785,29 +785,41 @@ header.mobile .logo__text {
 }
 
 .clients__list_li {
-  background-color: #0beb89;
+  padding: 0 2%;
+  align-items: center;
+  background-color: #69b3d2;
   display: flex;
   flex-flow: row;
-  align-items: center;
-  height: 150px;
+  height: 170px;
+  justify-content: space-between;
   margin-bottom: 0;
 }
 
-.clients__list_li:nth-child(even) {
-  background-color: #0b96eb;
-}
-
 .clients__list_li:before {
+  background-color: rgba(255, 255, 255, .5);
   content: '';
+  height: 170px;
+  left: 0;
+  padding: 0 2%;
   position: absolute;
   width: 100%;
-  height: 150px;
-  background-color: rgba(255, 255, 255, .5);
+}
+
+.clients__list_li:nth-child(4n+2) {
+  background-color: #5cb894;
+}
+
+.clients__list_li:nth-child(4n+3) {
+  background-color: #b9b65b;
+}
+
+.clients__list_li:nth-child(4n+4) {
+  background-color: #edd766;
 }
 
 .clients__list_li:hover:before,
 .clients__list_li:nth-child(even):hover:before {
-  transition: transform 1.2s ease;
+  transition: transform .95s ease;
 }
 
 .clients__list_li:hover:before {
@@ -823,53 +835,54 @@ header.mobile .logo__text {
 }
 
 .clients__list_content {
-  width: 70%;
-  padding-top: 32px;
   padding-bottom: 32px;
   padding-left: 60px;
   padding-right: 0px;
-  text-align: left;
+  padding-top: 32px;
+  display: inline-flex;
+  justify-content: center;
   z-index: 9999;
 }
 
 .clients__list_logo {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  overflow: hidden;
-  padding-left: 15px;
-  padding-right: 60px;
-  flex-flow: nowrap;
   align-items: center;
-  justify-content: center;
+  display: flex;
+  flex-flow: nowrap;
+  height: 100%;
+  justify-content: flex-end;
+  overflow: hidden;
+  padding-right: 60px;
+  pointer-events: none;
+  width: 60%;
 }
 
 .clients__list_li:nth-child(even) .clients__list_content {
   padding-left: 0px;
   padding-right: 60px;
-  text-align: left;
+  text-align: right;
 }
 
 .clients__list_li:nth-child(even) .clients__list_logo {
   padding-left: 60px;
-  padding-right: 15px;
+  padding-right: 0px;
+  justify-content: flex-start;
 }
 
 .clients__list_logo_outer-circle {
-  width: 250px;
-  height: 250px;
-  background-color: white;
+  align-items: center;
+  background-color: #ffffff;
   border-radius: 50%;
   display: flex;
-  align-items: center;
+  height: 250px;
   justify-content: center;
+  pointer-events: none;
   transform-origin: center;
+  width: 250px;
   z-index: 5;
 }
 
-.clients__list .clients__list_logo img {
-  max-width: 55%;
-  image-rendering: crisp-edges;
+.clients__list_logo_img {
+  max-width: 70%;
   outline: 1px solid transparent;
 }
 
@@ -882,15 +895,16 @@ header.mobile .logo__text {
 }
 
 .clients__list_li:hover .clients__list_logo_outer-circle {
+  overflow: hidden;
   transform: scale(1.12);
   transition: transform .5s ease;
 }
 
 .clients__list_logo_img:not(.clients__list_logo_bw) {
-  position: absolute;
-  width: 150px;
   height: auto;
   opacity: 0;
+  pointer-events: none;
+  position: absolute;
 }
 
 .clients__list_li:hover .clients__list_logo_bw {
