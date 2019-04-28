@@ -31,3 +31,42 @@ body.loaded .atf__headline span {
   transform: none;
   opacity: 1;
 }
+
+.clients__list_li_open {
+  height: 500px;
+  z-index: 99999;
+  position: fixed;
+  width: calc(100% - 16%) !important;
+  top: calc(50% - 250px);
+}
+
+.clients__list_overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -99998;
+  left: 0;
+  background-color: #000;
+  opacity: 0;
+}
+
+.clients__list_overlay:hover {
+  cursor: auto;
+}
+
+.clients__list_open .clients__list_overlay {
+  opacity: .3;
+  z-index: 99998;
+}
+
+.clients__list_open .clients__list_overlay {
+  transition: opacity .25s ease-out;
+}
+
+.clients__list_li_open .clients__list_li:before,
+.clients__list_li_open:nth-child(even) .clients__list_li:before,
+.clients__list_li_open:hover:before,
+.clients__list_li_open:nth-child(even):hover:before {
+    transition: none;
+  }
