@@ -39,6 +39,6 @@ let checkWidth = () => {
   }
 }
 
-window.onresize = checkWidth
-window.onload = checkWidth
-window.addEventListener("sizemodechange", checkWidth)
+window.onresize = checkWidth;
+window.onload = checkWidth;
+window.addEventListener("sizemodechange", checkWidth);

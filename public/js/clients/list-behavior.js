@@ -5,38 +5,38 @@ let activeLi = false;
 let toggleOpen = (li, target) => {
   let mode = open;
   if (target.className != 'clients__list_overlay') {
-    if(li.dataset.isOpen == 'false' || li.dataset.isOpen == undefined)
-      mode = 'open'
-    else mode = 'close'
-  } else mode = 'close'
+    if (li.dataset.isOpen == 'false' || li.dataset.isOpen == undefined)
+      mode = 'open';
+    else mode = 'close';
+  } else mode = 'close';
 
-  if(mode == 'open'){
+  if (mode == 'open') {
     activeLi = li;
-    activeLi.dataset.isOpen = true
-    activeLi.classList.add('clients__list_li_open')
-    list.classList.add('clients__list_open')
-  } else if(mode == 'close'){
-    activeLi.dataset.isOpen = false
-    activeLi.classList.remove('clients__list_li_open')
-    list.classList.remove('clients__list_open')
+    activeLi.dataset.isOpen = true;
+    activeLi.classList.add('clients__list_li_open');
+    list.classList.add('clients__list_open');
+  } else if (mode == 'close') {
+    activeLi.dataset.isOpen = false;
+    activeLi.classList.remove('clients__list_li_open');
+    list.classList.remove('clients__list_open');
   }
 }
 
 list.addEventListener('click', (e) => {
-  e.stopPropagation()
-  let li = e.target.closest(".clients__list_li")
+  e.stopPropagation();
+  let li = e.target.closest(".clients__list_li");
   toggleOpen(li, e.target);
-}, false)
+}, false);
 
 let transform = '';
 const renderCursor = () => {
   computeCursorPos();
-  cursor.style.transform = transform
+  cursor.style.transform = transform;
   requestAnimationFrame(renderCursor);
 }
 
-let x = window.innerWidth/2,
-  y = window.innerHeight/2,
+let x = window.innerWidth / 2,
+  y = window.innerHeight / 2,
   curX = x,
   curY = y;
 
@@ -56,10 +56,10 @@ window.addEventListener('mousemove', mousemove);
 requestAnimationFrame(renderCursor);
 
 const computeCursorPos = () => {
-  curX += (x - curX)*0.175
-  curY += (y - curY)*0.175
+  curX += (x - curX) * 0.175;
+  curY += (y - curY) * 0.175;
   transform =
     "translate(" +
-      curX + "px, " +
-      curY  + "px)"
+    curX + "px, " +
+    curY + "px)";
 }
