@@ -69,7 +69,7 @@ a:hover {
   background-color: #ffffff;
   position: fixed;
   width: 100%;
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .header__container {
@@ -253,7 +253,7 @@ a:hover {
 
 .mobile .header__container {
   position: fixed;
-  z-index: 9999;
+  z-index: 99997;
 }
 
 .mobile .nav__logo img {
@@ -691,15 +691,27 @@ a:hover {
   width: 100%;
 }
 
+.clients {
+  margin-top: calc(15vw + 6vh);
+}
+
 @media(min-width: 768px) and (orientation: landscape) {
   .atf__bottom-hedge img {
     bottom: -18vw;
+  }
+
+  .clients {
+    margin-top: 18vw;
   }
 }
 
 @media(orientation: portrait) {
   .atf__bottom-hedge img {
     bottom: -5vh;
+  }
+
+  .clients {
+    margin-top: 5vw;
   }
 }
 
