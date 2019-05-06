@@ -1,5 +1,10 @@
-const cursor = document.querySelector(".clients__list_cursor")
-const list = document.querySelector(".clients__list");
+const cursor = document.querySelector('.clients__list_cursor')
+const list = document.querySelector('.clients__list');
+
+let isMobile = () => {
+    return (typeof window.orientation !== "undefined") ||
+      (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
 
 let activeLi = false;
 let toggleOpen = (li, target) => {
@@ -24,7 +29,7 @@ let toggleOpen = (li, target) => {
 
 list.addEventListener('click', (e) => {
   e.stopPropagation();
-  let li = e.target.closest(".clients__list_li");
+  let li = e.target.closest('.clients__list_li');
   toggleOpen(li, e.target);
 }, false);
 
@@ -55,11 +60,16 @@ window.addEventListener('touchmove', touch);
 window.addEventListener('mousemove', mousemove);
 requestAnimationFrame(renderCursor);
 
+if(isMobile()){
+  cursor.classList.add('global_display_none')
+  list.classList.add('clients__list_mobile')
+}
+
 const computeCursorPos = () => {
   curX += (x - curX) * 0.175;
   curY += (y - curY) * 0.175;
   transform =
-    "translate(" +
-    curX + "px, " +
-    curY + "px)";
+    'translate(' +
+    curX + 'px, ' +
+    curY + 'px)';
 }

@@ -9,19 +9,19 @@ let lFollowX = 0,
   width = (window.innerWidth > 0) ? window.innerWidth : screen.width,
   bgMove = 0;
 
-const container = document.querySelector(".atf");
-const el = document.querySelector(".atf__background");
+const container = document.querySelector('.atf');
+const el = document.querySelector('.atf__background');
 let moveBackground = () => {
   x += (lFollowX - x) * friction;
   y += (lFollowY - y) * friction;
 
-  el.style.backgroundPositionX = x + "px";
-  el.style.backgroundPositionY = y + "px";
+  el.style.backgroundPositionX = x + 'px';
+  el.style.backgroundPositionY = y + 'px';
 
   bgMove = window.requestAnimationFrame(moveBackground);
 }
 
-container.addEventListener("mousemove", (e) => {
+container.addEventListener('mousemove', (e) => {
   var lMouseX = Math.max(-100, Math.min(100, window.innerWidth / 2 - e.clientX));
   var lMouseY = Math.max(-100, Math.min(100, window.innerHeight / 2 - e.clientY));
   lFollowX = (20 * lMouseX) / 100;
@@ -41,4 +41,4 @@ let checkWidth = () => {
 
 window.onresize = checkWidth;
 window.onload = checkWidth;
-window.addEventListener("sizemodechange", checkWidth);
+window.addEventListener('sizemodechange', checkWidth);
