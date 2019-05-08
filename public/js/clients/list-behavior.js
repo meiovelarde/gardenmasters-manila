@@ -40,19 +40,19 @@ const renderCursor = () => {
   requestAnimationFrame(renderCursor);
 }
 
-let x = window.innerWidth / 2,
-  y = window.innerHeight / 2,
-  curX = x,
-  curY = y;
+let lix = window.innerWidth / 2,
+  liy = window.innerHeight / 2,
+  curX = lix,
+  curY = liy;
 
 let touch = (e) => {
-  x = e.originalEvent.touches[0].clientX;
-  y = e.originalEvent.touches[0].clientY;
+  lix = e.originalEvent.touches[0].clientX;
+  liy = e.originalEvent.touches[0].clientY;
 }
 
 let mousemove = (e) => {
-  x = e.clientX;
-  y = e.clientY;
+  lix = e.clientX;
+  liy = e.clientY;
 }
 
 window.addEventListener('touchstart', touch);
@@ -66,8 +66,8 @@ if(isMobile()){
 }
 
 const computeCursorPos = () => {
-  curX += (x - curX) * 0.175;
-  curY += (y - curY) * 0.175;
+  curX += (lix - curX) * 0.175;
+  curY += (liy - curY) * 0.175;
   transform =
     'translate(' +
     curX + 'px, ' +

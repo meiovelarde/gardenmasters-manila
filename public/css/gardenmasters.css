@@ -677,6 +677,10 @@ a:hover {
   }
 }
 
+.atf__bottom-hedge img {
+    box-shadow: 0px 8px 6px -6px rgba(0,0,0, 0.6);
+}
+
 @media (min-width: 768px) {
   .atf__headline h1 {
     font-size: 5rem;
@@ -947,6 +951,7 @@ a:hover {
 /* Media queries - Client list header & content */
 .clients__header {
   padding: 5% 3%;
+  padding-top: 10%;
   width: calc(100% - 6%);
 }
 
@@ -957,6 +962,7 @@ a:hover {
 @media(min-width: 1000px) {
   .clients__header {
     padding: 3% 8%;
+    padding-top: 8%;
     width: calc(100% - 16%);
   }
 
@@ -1101,14 +1107,14 @@ a:hover {
 }
 
 .clients__list_overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  z-index: -99998;
-  left: 0;
   background-color: #000;
+  position: fixed;
+  height: 100%;
+  left: 0;
   opacity: 0;
+  top: 0;
+  width: 100%;
+  z-index: -99998;
 }
 
 /* Clients list cursor */
@@ -1129,13 +1135,13 @@ a:hover {
   }
 
   .clients__list_mobile .clients__list_li_open {
+    flex-direction: column;
+    flex-flow: column;
     height: 100%;
-    width: calc(100% - 8%);
+    justify-content: center;
     padding: 0 4%;
     top: 0;
-    flex-flow: column;
-    flex-direction: column;
-    justify-content: center;
+    width: calc(100% - 8%);
   }
 
   .clients__list_mobile .clients__list_li_open:nth-child(even) {
@@ -1143,10 +1149,10 @@ a:hover {
   }
 
   .clients__list_mobile .clients__list_li_open .clients__list_logo{
-    padding: 0;
     height: 300px;
+    justify-content: center;
+    padding: 0;
     width: 100%;
-    justify-content: center
   }
 
   .clients__list_mobile .clients__list_li_open .clients__list_logo_circle_front,
@@ -1155,11 +1161,11 @@ a:hover {
     width: 220px;
   }
   .clients__list_mobile .clients__list_li_open .clients__list_content {
-    padding: 0;
-    width: 100%;
-    margin: 20px 0;
     justify-content: center;
+    margin: 20px 0;
+    padding: 0;
     text-align: center;
+    width: 100%;
   }
 }
 
