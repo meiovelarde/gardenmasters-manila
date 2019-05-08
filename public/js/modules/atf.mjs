@@ -29,7 +29,6 @@ export const M_ATF = {
 			lFollowY = (10 * lMouseY) / 100;
 		});
 
-
 		let checkWidth = () => {
 			width = S_getWidth();
 			if (width >= 1000) {
@@ -44,5 +43,4 @@ export const M_ATF = {
 		window.addEventListener('sizemodechange', checkWidth);
 	}
 }
-
-export default M_ATF
+export default M_ATF;

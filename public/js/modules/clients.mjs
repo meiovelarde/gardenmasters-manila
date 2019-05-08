@@ -4,8 +4,8 @@ export const M_CLIENTS = {
   cursor: () => {return document.querySelector('.clients__list_cursor')},
   list: () => {return document.querySelector('.clients__list')},
 	init() {
-		const cursor = this.cursor()
-		const list = this.list()
+		const cursor = this.cursor();
+		const list = this.list();
 
     // init opening client list item
 		let activeLi = false;
@@ -78,4 +78,4 @@ export const M_CLIENTS = {
 		}
 	}
 }
-export default M_CLIENTS
+export default M_CLIENTS;
