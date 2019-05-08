@@ -542,20 +542,20 @@ a:hover {
   }
 }
 
-.nav__menu_fullscreen.active .nav__content-text.clients {
+.nav__menu_fullscreen.active .nav__content-text_clients {
   transition-duration: .75s, 1s;
   transition-property: opacity, width;
   transition-timing-function: ease-out, ease-out;
 }
 
-.nav__menu_fullscreen.active .nav__content-text.services {
+.nav__menu_fullscreen.active .nav__content-text_services {
   transition-delay: .175s;
   transition-duration: .5s, .75s;
   transition-property: opacity, width;
   transition-timing-function: ease-out, ease-out;
 }
 
-.nav__menu_fullscreen.active .nav__content-text.quote {
+.nav__menu_fullscreen.active .nav__content-text_quote {
   transition-delay: .325s;
   transition-duration: .5s;
   transition-property: opacity, width;
