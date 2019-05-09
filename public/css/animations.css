@@ -86,7 +86,7 @@ body.loaded .atf__headline span {
 
 .clients__list_open .clients__list_overlay {
   opacity: .3;
-  z-index: 99998;
+  z-index: 101;
 }
 
 .clients__list:hover {
@@ -132,7 +132,6 @@ transition-timing-function: ease;
     transition-duration: .5s;
     transition-property: opacity;
     transition-timing-function: ease-out;
-    z-index: 1000000;
   }
 
   .clients__list:hover .clients__list_cursor_minus,

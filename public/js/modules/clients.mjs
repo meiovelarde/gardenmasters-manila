@@ -62,11 +62,6 @@ export let M_CLIENTS = {
 		window.addEventListener('mousemove', mousemove);
 		requestAnimationFrame(renderCursor);
 
-		if (S_isMobile()) {
-			cursor.classList.add('global_display_none')
-			list.classList.add('clients__list_mobile')
-		}
-
 		const computeCursorPos = () => {
 			curX += (x - curX) * 0.175;
 			curY += (y - curY) * 0.175;
@@ -75,6 +70,17 @@ export let M_CLIENTS = {
 				curX + 'px, ' +
 				curY + 'px)';
 		}
+
+    let setMobile = () => {
+      if (S_isMobile()) {
+        cursor.classList.add('global_display_none')
+        list.classList.add('clients__list_mobile')
+      }
+    }
+
+    setMobile();
+		window.onresize = setMobile;
+		window.addEventListener('sizemodechange', setMobile);
 	}
 }
 export default M_CLIENTS;

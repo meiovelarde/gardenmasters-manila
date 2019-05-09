@@ -7,7 +7,7 @@ export const M_ATF = {
 			x = 0,
 			y = 0,
 			friction = 1 / 30,
-			width = (window.innerWidth > 0) ? window.innerWidth : screen.width,
+			width = S_getWidth(),
 			bgMove = 0;
 
 		const ATF_CONTAINER = document.querySelector('.atf');
@@ -31,16 +31,21 @@ export const M_ATF = {
 
 		let checkWidth = () => {
 			width = S_getWidth();
+			window.cancelAnimationFrame(bgMove);
 			if (width >= 1000) {
 				bgMove = window.requestAnimationFrame(moveBackground);
-			} else {
-				window.cancelAnimationFrame(bgMove);
 			}
 		}
 
-		window.onresize = checkWidth;
-		window.onload = checkWidth;
-		window.addEventListener('sizemodechange', checkWidth);
+		let handleResize = () => {
+			checkWidth()
+			ATF_BACKGROUND.style.backgroundPositionX = ''
+			ATF_BACKGROUND.style.backgroundPositionY = ''
+		}
+
+		checkWidth();
+		window.onresize = handleResize;
+		window.addEventListener('sizemodechange', handleResize);
 	}
 }
 export default M_ATF;

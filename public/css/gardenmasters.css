@@ -69,7 +69,7 @@ a:hover {
   background-color: #ffffff;
   position: fixed;
   width: 100%;
-  z-index: 99999;
+  z-index: 101;
 }
 
 .header__container {
@@ -253,7 +253,7 @@ a:hover {
 
 .mobile .header__container {
   position: fixed;
-  z-index: 99997;
+  z-index: 102;
 }
 
 .mobile .nav__logo img {
@@ -391,12 +391,12 @@ a:hover {
 
 .nav__menu_fullscreen {
   opacity: 0;
-  z-index: -9999;
+  z-index: -1;
 }
 
 .nav__menu_fullscreen.active {
   opacity: 1;
-  z-index: 99996;
+  z-index: 101;
   transition: opacity .15s ease;
 }
 
@@ -742,7 +742,7 @@ a:hover {
   font-weight: 700;
   text-shadow: 0px 2px 3px #000000;
   transition: transform .1s ease, text-shadow .15s 0s ease-in-out;
-  z-index: 2;
+  z-index: 1;
 }
 
 .atf__button:hover {
@@ -769,7 +769,6 @@ a:hover {
   transform-origin: top-left;
   transition: all .45s ease-in-out;
   width: 0;
-  z-index: 1;
 }
 
 .atf__button-set {
@@ -777,7 +776,7 @@ a:hover {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  z-index: 9996;
+  z-index: 1;
 }
 
 @media(min-width: 768px) {
@@ -894,7 +893,7 @@ a:hover {
 
 .clients__list_content {
   display: inline-flex;
-  z-index: 9999;
+  z-index: 1;
 }
 
 .clients__list_logo {
@@ -926,7 +925,6 @@ a:hover {
   overflow: hidden;
   pointer-events: none;
   position: absolute;
-  z-index: 5;
 }
 
 .clients__list_logo_img {
@@ -1078,11 +1076,11 @@ a:hover {
 /* Clients list */
 .clients__list_li_open {
   height: 400px;
-  z-index: 99999;
   position: fixed;
   width: calc(100% - 4%);
   top: calc(50% - 200px);
   box-shadow: 0px 0px 25px 0px;
+  z-index: 102;
 }
 
 .clients__list_li_open:before{
@@ -1114,7 +1112,7 @@ a:hover {
   opacity: 0;
   top: 0;
   width: 100%;
-  z-index: -99998;
+  z-index: -1;
 }
 
 /* Clients list cursor */
@@ -1126,6 +1124,7 @@ a:hover {
   pointer-events: none;
   position: fixed;
   top: 0;
+  z-index: 103;
 }
 
 /* Clients list mobile - Full screen overlay */
