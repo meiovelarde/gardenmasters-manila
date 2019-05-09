@@ -31,38 +31,38 @@
 
 	<!-- First order javascript
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<script type="text/javascript" src="js/animate-landing-page.js"></script>
+	<script type="module" src="js/main.mjs"></script>
 </head>
 
 <!-- Primary page layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<body>
+<body class="main">
 	<!-- Web header start
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<header class="web">
-		<div class="header_main global_flex-center">
-			<nav class="nav--wrapper global_highlight-none global_flex-center">
+		<div class="header__container global_flex_center">
+			<nav class="header__nav_wrapper global_highlight_none global_flex_center">
 				<!-- Web Header - Main navigation (Left logo & nav items)
 				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<div class="nav_main global_flex-center">
-					<div class="nav_logo global_flex-center" title="Return to Gardenmasters Manila">
+				<div class="nav__main global_flex_center">
+					<div class="nav__logo global_flex_center" title="Return to Gardenmasters Manila">
 						<img src="images/logo_trans.png" alt="Gardenmasters Manila, Inc.">
 						<span class="logo__text">
 							GARDENMASTERS MANILA
 						</span>
 					</div>
 
-					<div class="nav_main-container global_flex-center">
-						<a href="" class="global_flex-center">
+					<div class="nav__main_container global_flex_center">
+						<a href="" class="global_flex_center">
 							<i class="fas fa-user-friends"></i>
 							<span class="nav__text"> clients </span>
 						</a>
-						<a href="" class="global_flex-center">
+						<a href="" class="global_flex_center">
 							<i class="fas fa-people-carry"></i>
 							<span class="nav__text"> services </span>
 						</a>
-						<a href="" class="global_flex-center">
+						<a href="" class="global_flex_center">
 							<i class="fas fa-file-signature"></i>
 							<span class="nav__text"> request a quote
 							</span> </a>
@@ -71,7 +71,7 @@
 
 				<!-- Web Header - Connect navigation (FB, Mail)
 				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-				<div class="nav_connect global_flex-center">
+				<div class="nav__connect global_flex_center">
 					<a href="https://www.facebook.com" class="facebook" target="_blank">
 						<i class="fab fa-facebook-f nav__icon"></i>
 					</a>
@@ -87,10 +87,10 @@
 	<!-- Mobile header start
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<header class="mobile">
-		<div class="header_main global_flex-center">
-			<nav class="nav--wrapper global_highlight-none global_flex-center">
-				<div class="nav_main global_flex-center">
-					<div class="nav_logo global_flex-center" title="Return to Gardenmasters Manila">
+		<div class="header__container global_flex_center">
+			<nav class="header__nav_wrapper global_highlight_none global_flex_center">
+				<div class="nav__main global_flex_center">
+					<div class="nav__logo global_flex_center" title="Return to Gardenmasters Manila">
 						<img src="images/logo_trans.png" alt="Gardenmasters Manila, Inc.">
 						<span class="logo__text">
 							GARDENMASTERS MANILA
@@ -98,9 +98,9 @@
 					</div>
 				</div>
 
-				<div class="nav_menu">
-					<div class="nav_burger">
-						<div class="nav_burger--inner">
+				<div class="nav__menu">
+					<div class="nav__burger">
+						<div class="nav__burger_inner">
 						</div>
 					</div>
 					<span class="nav__text menu">
@@ -116,23 +116,23 @@
 		</div>
 	</header>
 
-	<div class="mobile nav_menu-fullscreen">
-		<nav class="nav_menu--contents">
+	<div class="mobile nav__menu_fullscreen">
+		<nav class="nav__menu_contents">
 			<a href="">
 				<i class="fas fa-user-friends"></i>
-				<span class="nav__content-text clients"> clients </span>
+				<span class="nav__content-text nav__content-text_clients"> clients </span>
 			</a>
 			<a href="">
 				<i class="fas fa-people-carry"></i>
-				<span class="nav__content-text services"> services </span>
+				<span class="nav__content-text nav__content-text_services"> services </span>
 			</a>
 			<a href="">
 				<i class="fas fa-file-signature"></i>
-				<span class="nav__content-text quote"> request a quote </span> </a>
+				<span class="nav__content-text nav__content-text_quote"> request a quote </span> </a>
 		</nav>
 
-		<nav class="nav_menu--connect">
-			<div class="global_justify-center">
+		<nav class="nav__menu_connect">
+			<div class="global_justify_center">
 				<a href="https://www.facebook.com" class="facebook" target="_blank">
 					<i class="fab fa-facebook-f nav__icon"></i>
 				</a>
@@ -143,47 +143,255 @@
 			</div>
 		</nav>
 
-		<nav class="nav_menu--numbers">
+		<nav class="nav__menu_numbers">
 			<a href="tel: +632-800-7303" type="phone" target="_blank"><span> Tel: (+632) 800-7303 </span></a>
 			<a href="tel: +63915-358-3865" type="phone" target="_blank"><span> Cel: (+63915) 358-3865 </span></a>
-			<span class="copyright global_highlight-none"> © Gardenmasters Manila, Inc. </span>
+			<span class="copyright global_highlight_none"> © Gardenmasters Manila, Inc. </span>
 		</nav>
 	</div>
 
-	<section class="section_landing">
-		<div class="atf_headline global_highlight-none">
-			<h1> <span> WE BRING </span>
-				<span class="nature">
-					NATURE
-				</span>
-			 <span> TO YOUR DOORSTEPS. </span>
-			</h1>
+	<!-- ATF
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<section class="atf">
+		<div class="atf__background">
 		</div>
-
-		<div class="atf_button-set">
-			<div class="atf_button">
-				<span class="atf_button-text global_highlight-none">
-					WHAT WE DO ⇀
-				</span>
+		<div class="atf__content">
+			<div class="atf__headline global_highlight_none">
+				<h1> <span> WE BRING </span>
+					<span class="atf__headline_nature">
+						NATURE
+					</span>
+					<span> TO YOUR DOORSTEPS.</span>
+				</h1>
 			</div>
 
-			<div class="atf_button">
-				<span class="atf_button-text global_highlight-none">
-					REQUEST A QUOTE ⇀
-				</span>
+			<div class="atf__button-set">
+				<div class="atf__button">
+					<span class="atf__button-text global_highlight_none">
+						WHAT WE DO ⇀
+					</span>
+				</div>
+
+				<div class="atf__button">
+					<span class="atf__button-text global_highlight_none">
+						REQUEST A QUOTE ⇀
+					</span>
+				</div>
 			</div>
 		</div>
 
-		<div class="atf_bottom-hedge">
-			<img src="images/atf_bottom-hedge.png">
+		<div class="atf__bottom-hedge">
+			<img src="images/atf__bottom-hedge.png">
 		</div>
 	</section>
+	<section class="clients">
+
+		<!-- Web header start
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div class="clients__header">
+			<span class="clients__header_content global_highlight_none">
+				<h1> Clients </h1>
+				<h2> Nurturing over 25 years of trust in and around the Philippines </h2>
+			</span>
+		</div>
+
+		<ul class="clients__list global_highlight_none">
+			<div class="clients__list_overlay">
+			</div>
+			<div class="clients__list_cursor">
+				<i class="fas fa-plus-circle clients__list_cursor_plus"></i>
+				<i class="fas fa-minus-circle clients__list_cursor_minus"></i>
+			</div>
 
 
-	<!-- JS
-	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-	<script type="text/javascript" src="js/header.js"></script>
-	<script type="text/javascript" src="js/moving-background.js"></script>
+			<!-- Traveller's
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<li class="clients__list_li">
+				<span class="clients__list_content">
+					<span class="clients__list_content_details global_highlight_none">
+						<h3> Traveller's International Hotel Group </h3>
+						<span class="clients__list_content_details_more">
+							<i> 2015 - present </i> <br />
+							<b>Projects</b>: Hilton Manila, Sheraton Manila Hotel, Resorts World Manila <br />
+							<b>Scope of projects</b>: Landscaping supply and services, Fiberglass planter box supply
+						</span>
+					</span>
+				</span>
+				<div class="clients__list_logo">
+					<div class="clients__list_logo_circle_front">
+						<img class="clients__list_logo_img clients__list_logo_bw" src="/images/clients/logos/bw/travellers.jpg" />
+						<img class="clients__list_logo_img" src="/images/clients/logos/color/travellers.jpg" />
+					</div>
+
+					<div class="clients__list_logo_circle_back">
+						<img class="clients__list_img" src="/images/clients/project-pics/fuel-tank.jpg" />
+					</div>
+				</div>
+			</li>
+
+			<!-- Empire East
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<li class="clients__list_li">
+				<div class="clients__list_logo">
+					<div class="clients__list_logo_circle_front">
+						<img class="clients__list_logo_img clients__list_logo_bw" src="/images/clients/logos/bw/empire-east.jpg" />
+						<img class="clients__list_logo_img" src="/images/clients/logos/color/empire-east.jpg" />
+					</div>
+
+					<div class="clients__list_logo_circle_back">
+						<img class="clients__list_img" src="/images/clients/project-pics/kasara.jpg" />
+					</div>
+				</div>
+				<span class="clients__list_content">
+					<span class="clients__list_content_details global_highlight_none">
+						<h3> Empire East Land Holdings </h3>
+						<span class="clients__list_content_details_more">
+							<i> 2010 - 2016 </i> <br />
+							<b>Projects</b>: The Rochester, Remington Hotel (now <i>Holiday Inn Express Manila)</i>, The Sonoma, Kasara Urban Resort Residences <br />
+							<b>Scope of projects</b>: Softscape, Stamped concrete, Green wall, Water features, Fiberglass planter box supply
+						</span>
+					</span>
+				</span>
+			</li>
+
+			<!-- Cathay Land
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<li class="clients__list_li">
+				<span class="clients__list_content">
+					<span class="clients__list_content_details global_highlight_none">
+						<h3> Cathay Land </h3>
+						<span class="clients__list_content_details_more">
+							<i> 2005 - 2010 </i> <br />
+							<b>Projects</b>: South Forbes Golf City <br />
+							<b>Scope of projects</b>: Softscape design, Water features, Swimming pools
+						</span>
+					</span>
+				</span>
+				<div class="clients__list_logo">
+					<div class="clients__list_logo_circle_front">
+						<img class="clients__list_logo_img clients__list_logo_bw" src="/images/clients/logos/bw/cathay-land.jpg" />
+						<img class="clients__list_logo_img" src="/images/clients/logos/color/cathay-land.jpg" />
+					</div>
+
+					<div class="clients__list_logo_circle_back">
+						<img class="clients__list_img" src="/images/clients/project-pics/cathay.jpg" />
+					</div>
+				</div>
+			</li>
+
+			<!-- Global-Estate
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<li class="clients__list_li">
+				<div class="clients__list_logo">
+					<div class="clients__list_logo_circle_front">
+						<img class="clients__list_logo_img clients__list_logo_bw clients__list_logo_img_global" src="/images/clients/logos/bw/global.jpg" />
+						<img class="clients__list_logo_img clients__list_logo_img_global" src="/images/clients/logos/color/global.jpg" />
+					</div>
+
+					<div class="clients__list_logo_circle_back">
+						<img class="clients__list_img" src="/images/clients/project-pics/global.jpg" />
+					</div>
+				</div>
+				<span class="clients__list_content">
+					<span class="clients__list_content_details global_highlight_none">
+						<h3> Global-Estate Resorts </h3>
+						<span class="clients__list_content_details_more">
+							<i> 2012 - 2017 </i> <br />
+							<b>Projects</b>: Holiday Homes, Fairways and Bluewaters <br />
+							<b>Scope of projects</b>: Softscape design, Fiberglass pot supply
+						</span>
+					</span>
+				</span>
+			</li>
+
+			<!-- Filinvest Land
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<li class="clients__list_li">
+				<span class="clients__list_content">
+					<span class="clients__list_content_details global_highlight_none">
+						<h3> Filinvest Land </h3>
+						<span class="clients__list_content_details_more">
+							<i> 2001 - 2005 </i> <br />
+							<b>Projects</b>: Brentville Clubhouse, Village Front Prominence 2 <br />
+							<b>Scope of projects</b>: Hardscape, Softscape, Supply of plants, Maintenance works
+						</span>
+					</span>
+				</span>
+				<div class="clients__list_logo">
+					<div class="clients__list_logo_circle_front clients__list_logo_circle_backless">
+						<img class="clients__list_logo_img clients__list_logo_bw" src="/images/clients/logos/bw/filinvest.jpg" />
+						<img class="clients__list_logo_img" src="/images/clients/logos/color/filinvest.jpg" />
+					</div>
+				</div>
+			</li>
+
+			<!-- Philip Morris
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<li class="clients__list_li">
+				<div class="clients__list_logo">
+					<div class="clients__list_logo_circle_front clients__list_logo_circle_backless">
+						<img class="clients__list_logo_img clients__list_logo_bw" src="/images/clients/logos/bw/philip-morris.jpg" />
+						<img class="clients__list_logo_img" src="/images/clients/logos/color/philip-morris.jpg" />
+					</div>
+				</div>
+				<span class="clients__list_content">
+					<span class="clients__list_content_details global_highlight_none">
+						<h3> Philip Morris </h3>
+						<span class="clients__list_content_details_more">
+							<i> 2001 - 2002 </i> <br />
+							<b>Projects</b>: Philip Morris Plant <br />
+							<b>Scope of projects</b>: Turf installation, Maintenance
+						</span>
+					</span>
+				</span>
+			</li>
+
+			<!-- Shang
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<li class="clients__list_li">
+				<span class="clients__list_content">
+					<span class="clients__list_content_details global_highlight_none">
+						<h3> Shangri-La Hotels and Resorts </h3>
+						<span class="clients__list_content_details_more">
+							<i> 1997 - 1998 </i> <br />
+							<b>Projects</b>: Makati Shangri-La <br />
+							<b>Scope of projects</b>: Resident florist, Plant consultant, Plant renter
+						</span>
+					</span>
+				</span>
+				<div class="clients__list_logo">
+					<div class="clients__list_logo_circle_front clients__list_logo_circle_backless">
+						<img class="clients__list_logo_img clients__list_logo_bw" src="/images/clients/logos/bw/shang.jpg" />
+						<img class="clients__list_logo_img" src="/images/clients/logos/color/shang.jpg" />
+					</div>
+				</div>
+			</li>
+
+			<!-- Megaworld
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+			<li class="clients__list_li">
+				<div class="clients__list_logo">
+					<div class="clients__list_logo_circle_front clients__list_logo_circle_backless">
+						<img class="clients__list_logo_img clients__list_logo_bw" src="/images/clients/logos/bw/megaworld.jpg" />
+						<img class="clients__list_logo_img" src="/images/clients/logos/color/megaworld.jpg" />
+					</div>
+				</div>
+				<span class="clients__list_content">
+					<span class="clients__list_content_details global_highlight_none">
+						<h3> Megaworld </h3>
+						<span class="clients__list_content_details_more">
+							<i> 1995 - 1998 </i> <br />
+							<b>Projects</b>: Governor's Place & Richmonde Plaza<br />
+							<b>Scope of projects</b>: Hardscape, Softscape design & supply
+						</span>
+					</span>
+				</span>
+			</li>
+		</ul>
+
+
+	</section>
+
 	<!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

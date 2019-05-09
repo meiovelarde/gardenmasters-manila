@@ -1,33 +1,155 @@
-/* Separating all scripted animations in a separate file kasi ang hassle.
-Does not include hover animations.
+/* Separating all js-scripted animations in a separate file kasi ang hassle.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-body {
+body.main {
+  transition-delay: 1s;
+  transition-duration: .45s;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
   opacity: 0;
-  transition: opacity .45s 1s ease-out;
 }
 
-body.loaded {
+body.main:not(.loaded){
+  overflow: hidden;
+}
+
+body.main.loaded {
   opacity: 1;
 }
 
-.atf_headline span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(8px)
-}
-
-body.loaded .atf_headline span:not(.nature) {
+body.loaded .atf__headline span:not(.atf__headline_nature) {
   transition-delay: 1.75s;
 }
 
-body.loaded .nature {
+body.loaded .atf__headline_nature {
   transition-delay: 1.3s;
 }
 
-body.loaded .atf_headline span {
-  transition-property: opacity, transform;
-  transition-duration: .45s;
-  transition-timing-function: ease-out;
+body.loaded .atf__headline span {
   transform: none;
+  transition-duration: .45s;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
   opacity: 1;
 }
+
+/* Client list animations/related states */
+@media(min-width: 1000px) {
+  .clients__list_li:hover:before,
+  .clients__list_li:nth-child(even):hover:before {
+    transition: transform .95s ease;
+  }
+
+  .clients__list_li:hover:before,
+  .clients__list_li_open:before {
+    transform: translateX(150%) skew(45deg);
+  }
+
+  .clients__list_li:nth-child(even):hover:before,
+  .clients__list_li_open:nth-child(even):before {
+    transform: translateX(-150%) skew(45deg);
+  }
+
+  .clients__list_li:hover img {
+    transition: opacity .5s ease;
+  }
+
+  .clients__list_li:not(.clients__list_li_open):hover
+  .clients__list_logo_circle_front {
+    transform: scale(1.115);
+    transition: transform .5s ease;
+  }
+
+  .clients__list_li_open .clients__list_logo_circle_front {
+    transform: scale(1.115) rotateY(180deg);
+  }
+
+  .clients__list_li:hover .clients__list_logo_bw {
+    opacity: 0;
+  }
+
+  .clients__list_li:hover :not(.clients__list_logo_bw) {
+    opacity: 1;
+  }
+}
+
+/* Open client list transitions and states*/
+.clients__list_open .clients__list_overlay {
+  transition-duration: .25s;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+}
+
+
+.clients__list_overlay:hover {
+  cursor: auto;
+}
+
+.clients__list_open .clients__list_overlay {
+  opacity: .3;
+  z-index: 101;
+}
+
+.clients__list:hover {
+  cursor: pointer;
+}
+
+/* Client list li open function styles and states */
+.clients__list_logo_circle_front,
+.clients__list_logo_circle_back{
+backface-visibility: hidden;
+transform-origin: center;
+transition-duration: .5s;
+transition-property: transform;
+transition-timing-function: ease;
+}
+
+.clients__list_logo_circle_back {
+  transform: rotateY(180deg)
+}
+
+.clients__list_li_open .clients__list_logo_circle_front {
+  transform: scale(1.115) rotateY(180deg);
+}
+
+.clients__list_li_open .clients__list_logo_circle_back {
+  transform: scale(1.115) rotateY(0deg);
+}
+
+
+
+/* Interrupt hover effect on closed client list when expanding early */
+.clients__list_li_open .clients__list_li:before,
+.clients__list_li_open:nth-child(even) .clients__list_li:before,
+.clients__list_li_open:hover:before,
+.clients__list_li_open:nth-child(even):hover:before {
+    transition: none;
+  }
+
+
+  /* Client list cursor styles on functionality and states */
+  .clients__list:hover .clients__list_cursor {
+    opacity: .6;
+    transition-duration: .5s;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+  }
+
+  .clients__list:hover .clients__list_cursor_minus,
+  .clients__list.clients__list_open:hover .clients__list_cursor_plus {
+    display: none;
+  }
+
+  .clients__list.clients__list_open:hover .clients__list_cursor_minus,
+  .clients__list:hover .clients__list_cursor_plus {
+    display: block
+  }
+
+/* Content details functionality:
+  when any client li is expanded and open, display content details. */
+  .clients__list_li_open .clients__list_content_details_more {
+    display: block;
+  }
+
+  .clients__list_li_open .clients__list_logo_circle_front.clients__list_logo_circle_backless {
+    transform: scale(1.115);
+  }
