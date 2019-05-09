@@ -1,4 +1,4 @@
-import { S_getWidth } from './shared.mjs'
+import { S_getWidth } from './shared.mjs';
 export const M_ATF = {
 	init() {
 		// Orig move code by Kriszta - https://codepen.io/vajkri/pen/grgQmb

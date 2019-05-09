@@ -1,14 +1,13 @@
 import { S_isMobile } from './shared.mjs';
 
-export const M_CLIENTS = {
+export let M_CLIENTS = {
   cursor: () => {return document.querySelector('.clients__list_cursor')},
   list: () => {return document.querySelector('.clients__list')},
+  activeLi: false,
 	init() {
 		const cursor = this.cursor();
 		const list = this.list();
-
     // init opening client list item
-		let activeLi = false;
 		let toggleOpen = (li, target) => {
 			let mode = open;
 			if (target.className != 'clients__list_overlay') {
@@ -18,13 +17,13 @@ export const M_CLIENTS = {
 			} else mode = 'close';
 
 			if (mode == 'open') {
-				activeLi = li;
-				activeLi.dataset.isOpen = true;
-				activeLi.classList.add('clients__list_li_open');
+				this.activeLi = li;
+				this.activeLi.dataset.isOpen = true;
+				this.activeLi.classList.add('clients__list_li_open');
 				list.classList.add('clients__list_open');
 			} else if (mode == 'close') {
-				activeLi.dataset.isOpen = false;
-				activeLi.classList.remove('clients__list_li_open');
+				this.activeLi.dataset.isOpen = false;
+				this.activeLi.classList.remove('clients__list_li_open');
 				list.classList.remove('clients__list_open');
 			}
 		}

@@ -1,6 +1,6 @@
 import M_CLIENTS from './modules/clients.mjs';
 import M_ATF from './modules/atf.mjs';
-import M_HEADER from './modules/header.mjs'
+import M_HEADER from './modules/header.mjs';
 const main = {
   init(){
     const forceScrollPositionTop = () => {
@@ -13,13 +13,8 @@ const main = {
       M_CLIENTS.init();
       M_HEADER.init();
     }
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.classList.add('loaded')
-      initModules();
-      forceScrollPositionTop();
-    } , false);
     window.addEventListener('load', () => {
-      document.body.classList.add('loaded')
+      document.body.classList.add('loaded');
       initModules();
       forceScrollPositionTop();
     }, false);

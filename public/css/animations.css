@@ -8,6 +8,10 @@ body.main {
   opacity: 0;
 }
 
+body.main:not(.loaded){
+  overflow: hidden;
+}
+
 body.main.loaded {
   opacity: 1;
 }

@@ -396,7 +396,7 @@ a:hover {
 
 .nav__menu_fullscreen.active {
   opacity: 1;
-  z-index: 9998;
+  z-index: 99996;
   transition: opacity .15s ease;
 }
 
