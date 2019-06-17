@@ -1,6 +1,7 @@
-import M_CLIENTS from './modules/clients.mjs';
 import M_ATF from './modules/atf.mjs';
+import M_CLIENTS from './modules/clients.mjs';
 import M_HEADER from './modules/header.mjs';
+import M_SERVICES from './modules/services.mjs';
 const main = {
   init(){
     const forceScrollPositionTop = () => {
@@ -9,6 +10,7 @@ const main = {
       }
     }
     const initModules = () => {
+      M_SERVICES.init();
       M_ATF.init();
       M_CLIENTS.init();
       M_HEADER.init();

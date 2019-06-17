@@ -8,8 +8,8 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/clients', function(req, res){
-  res.sendFile(__dirname + '/public/clients.html');
+app.get('/services', function(req, res){
+  res.sendFile(__dirname + '/public/services.html');
 })
 
 server.listen(8081, function () {
