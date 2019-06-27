@@ -88,15 +88,16 @@ export const M_SERVICES = {
 		}
 
 		let animatePhotos = async () => {
-			let gridInView = new Promise((resolve, reject) => {
+			let photosAnimated = false;
+			let gridInView = async () => {
 				const GRID = document.querySelector('.services__grid')
 				let status = S_ifElemInViewport(GRID)
-				if (status) resolve();
-
-				GRID.onerror = () => {
-					reject();
+				if (status && photosAnimated === false) {
+					await Promise.all(photoPromises)
+					GRID.classList.add('services__grid_visible')
+					photosAnimated = true;
 				}
-			})
+			}
 
 			let photoPromises = []
 			const GRID_PHOTOS = document.querySelectorAll('.services__grid_item img')
@@ -119,9 +120,8 @@ export const M_SERVICES = {
 				}))
 			}
 			await S_hasClass(document.body, 'loaded');
+			window.addEventListener('scroll', gridInView);
 
-			await gridInView.then(await Promise.all(photoPromises))
-			// .catch(() => { console.log('ahmmm')})
 		}
 		populateGrid()
 		animatePhotos()

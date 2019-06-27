@@ -16,7 +16,7 @@ export const M_HEADER = {
         logoTextIsClosed = false;
       }
     }
-    window.onscroll = hideLogoText;
+    window.addEventListener('scroll', hideLogoText)
 
     // Clicking mobile menu functionality
     let isMenuActive = false;
