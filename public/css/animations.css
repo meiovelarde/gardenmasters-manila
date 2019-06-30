@@ -1,35 +1,49 @@
 /* Separating all js-scripted animations in a separate file kasi ang hassle.
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 body.main {
-  transition-delay: 1s;
-  transition-duration: .45s;
-  transition-property: opacity;
-  transition-timing-function: ease-out;
-  opacity: 0;
-}
-
-body.main:not(.loaded){
   overflow: hidden;
+  transition: overflow-y 1.5s 0ms ease-out;
 }
 
 body.main.loaded {
-  opacity: 1;
+  overflow-y: auto;
 }
 
-body.loaded .atf__headline span:not(.atf__headline_nature) {
-  transition-delay: 1.75s;
+body.loaded .atf__headline *:not(.atf__headline_nature) {
+  transition-delay: 2.75s;
 }
 
 body.loaded .atf__headline_nature {
-  transition-delay: 1.3s;
+  transition-delay: 2.3s;
 }
 
-body.loaded .atf__headline span {
+body.loaded .atf__headline span,
+body.loaded .atf__headline p {
   transform: none;
-  transition-duration: .45s;
+  transition-duration: 500ms;
   transition-property: opacity, transform;
   transition-timing-function: ease-out;
   opacity: 1;
+}
+
+.atf__headline span,
+.atf__headline p {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px)
+}
+
+.global_item_scroll {
+  opacity: 0;
+  transform: translateY(25px);
+  transition-property: all;
+  transition-timing-function: ease-out;
+  transition-duration: 500ms;
+}
+
+.global_item_scroll_visible {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 /* Client list animations/related states */

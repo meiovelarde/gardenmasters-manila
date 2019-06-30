@@ -1,3 +1,25 @@
+/* Prelloader
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.loader {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #f2f6f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  transition: opacity 500ms 1.5s ease-in, z-index 0ms 2s;
+  opacity: 1;
+}
+
+.loader.loaded {
+  opacity: 0;
+  z-index: -1
+}
+
 /* Global Values
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .global_highlight_none {
@@ -654,10 +676,8 @@ a:hover {
   }
 }
 
-.atf__headline span {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(8px)
+.atf__headline_nature {
+  color: #c3ff00;
 }
 
 .atf__button span {
@@ -970,6 +990,7 @@ a:hover {
 @media(min-width: 1000px) {
   .section__header {
     padding: 3% 8%;
+    padding-top: 10%;
     width: calc(100% - 16%);
   }
 
@@ -1190,12 +1211,9 @@ a:hover {
 
   .services__grid {
     align-items: center;
-    background-color: #1a383d;
+    background-color: rgba(50, 60, 30, 0.9);
     padding: 0 4%;
     width: 92%;
-    transition-property: background-color;
-    transition-duration: .25s;
-    transition-timing-function: ease-in-out;
   }
 
   @media(min-width: 550px){
@@ -1477,18 +1495,21 @@ a:hover {
     margin-right: 4px;
   }
 
-.services__grid_item_photo {
+.global_item_scroll.services__grid{
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
+.global_item_scroll .services__grid_item_photo{
   opacity: 0;
-  transform: translateY(20px);
-  transition-property: all;
+  transform: translateY(25px);
+  transition-property: opacity, transform;
   transition-timing-function: ease-out;
   transition-duration: 500ms;
 }
 
-.services__grid_visible .loaded-0,
-.services__grid_visible .loaded-1,
-.services__grid_visible .loaded-2,
-.services__grid_visible .loaded-3 {
+.global_item_scroll_visible .services__grid_item_photo {
   opacity: 1;
   transform: translateY(0px);
 }
@@ -1509,8 +1530,8 @@ a:hover {
 .request-quote .section__header{
   text-align: center;
   justify-content: center;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .section__header_content a{
@@ -1521,9 +1542,6 @@ a:hover {
 .section__header_content a:hover{
   opacity: .4;
 }
-
-
-
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

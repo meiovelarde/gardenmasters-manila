@@ -24,7 +24,7 @@ export const S_ifElemInViewport = (element) => {
 	if (
 		bounds.top >= 0 &&
 		bounds.left >= 0 &&
-		bounds.top < (window.innerWidth || document.documentElement.clientWidth) &&
+		bounds.top < ((window.innerHeight/10)*9 || (document.documentElement.clientHeight/10)*9) &&
 		bounds.bottom >= 0
 	) return true;
 	else return false;

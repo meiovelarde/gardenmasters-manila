@@ -94,7 +94,7 @@ export const M_SERVICES = {
 				let status = S_ifElemInViewport(GRID)
 				if (status && photosAnimated === false) {
 					await Promise.all(photoPromises)
-					GRID.classList.add('services__grid_visible')
+					GRID.classList.add('global_item_scroll_visible')
 					photosAnimated = true;
 				}
 			}
