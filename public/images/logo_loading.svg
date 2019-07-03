@@ -1,0 +1,35 @@
+<svg id="logo_g" data-name="logo g" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 298.48 297">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url("#linear-gradient");
+      }
+      .cls-2 {
+        fill: none;
+      }
+      .cls-3 {
+        fill: url("#linear-gradient-2");
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="127.7" y1="-66.51" x2="428.98" y2="103.03" gradientTransform="matrix(1, 0, 0, -1, -133.85, 170)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6af01d">
+      <animate attributeName="stop-color" values="#6af01d; #fff043; #1a9c9f; #b00b60; #6af01d;" dur="4.5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#1a9c9f">
+      <animate attributeName="stop-color" values="#1a9c9f; #b00b60; #6af01d; #fff043; #1a9c9f" dur="6s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="330.89" y1="821.82" x2="524.08" y2="821.82" gradientTransform="translate(-229.99 -675.32)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3ab67f">
+        <animate attributeName="stop-color" values="#3ab67f; #88c7fc; #e6fc88; #ffb239; #3ab67f;" dur="6s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#e6fc88">
+        <animate attributeName="stop-color" values="#e6fc88; #ffb239; #3ab67f; #88c7fc; #e6fc88" dur="4.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+  <title>leafy-g</title><path
+    class="cls-1"
+    d="M271.52,62.77c.47.68.88,1.4,1.29,2.12.06.1,0,.28-.06.47-.25,0-.6.11-.77,0-50-36.21-111.47-36.9-165.39-2.49C86.49,75.71,71,92.59,64.17,115.94,51.91,157.72,74,219.59,135.06,233.85c69.46,16.22,130.55-46.28,113.52-115.6-.31-1.27-.5-2.58-.88-4.58,17.86.84,34.45,3.58,46.61,18C300.15,142,298.15,158,298.15,158c0,62-57,139-142,139C87.5,297,0,250,0,149,0,83,47.15,0,154.15,0,228.15,0,263.07,50.77,271.52,62.77Z"/><path class="cls-2" d="M87.15,300"/><path
+    class="cls-3"
+    d="M154,95.32c29.21-12,59.36-14.67,90-6.47,17.61,4.72,34.69,13.35,45.4,28.44-25.09-19.76-56.57-24.74-87.57-19.58-31.68,5.27-53.62,24.5-69.74,51.29,6.79-5,13.41-10.26,20.42-14.94,19.15-12.79,39.44-23.35,62.71-25.65,24.83-2.45,47.23,1.32,69.25,14.32,11.81,7.94,12.71,13.06,13.54,21.39-18-18.7-40.51-20-63.58-19.72-1.43,0-3.29,1.87-4.16,3.33-3.14,5.29-5.67,10.94-8.93,16.15-12.62,20.16-30.06,33.55-53.89,37.85-5.08.92-10.07,2.25-15.11,3.37-17.51,3.87-33.31,11.22-47.51,23.78C104.86,208.88,102.86,118.48,154,95.32Z"/></svg>

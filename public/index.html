@@ -38,6 +38,33 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <body class="main">
+	<div class="loader">
+		<img src="images/logo_loading.svg" width="150px" height="150px;" />
+
+		<!-- TODO: PRELOAD DEZE MOTHERFUCKERS <div class="preload">
+			/images/clients/logos/bw/travellers.jpg
+			/images/clients/logos/color/travellers.jpg
+			/images/clients/project-pics/fuel-tank.jpg
+			/images/clients/logos/bw/empire-east.jpg
+			/images/clients/logos/color/empire-east.jpg
+			/images/clients/project-pics/kasara.jpg
+			/images/clients/logos/bw/cathay-land.jpg
+			/images/clients/logos/color/cathay-land.jpg
+			/images/clients/project-pics/cathay.jpg
+			/images/clients/logos/bw/global.jpg
+			/images/clients/logos/color/global.jpg
+			/images/clients/project-pics/global.jpg
+			/images/clients/logos/bw/filinvest.jpg
+			/images/clients/logos/color/filinvest.jpg
+			/images/clients/logos/bw/philip-morris.jpg
+			/images/clients/logos/color/philip-morris.jpg
+			/images/clients/logos/bw/shang.jpg
+			/images/clients/logos/color/shang.jpg
+			/images/clients/logos/bw/megaworld.jpg
+			/images/clients/logos/color/megaworld.jpg
+		</div> -->
+	</div>
+
 	<!-- Web header start
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<header class="web">
@@ -54,17 +81,17 @@
 					</div>
 
 					<div class="nav__main_container global_flex_center">
-						<a href="" class="global_flex_center">
+						<a class="global_flex_center nav__button top__button" data-target="clients">
 							<i class="fas fa-user-friends"></i>
 							<span class="nav__text"> clients </span>
 						</a>
-						<a href="" class="global_flex_center">
+						<a class="global_flex_center nav__button top__button" data-target="services">
 							<i class="fas fa-people-carry"></i>
 							<span class="nav__text"> services </span>
 						</a>
-						<a href="" class="global_flex_center">
+						<a class="global_flex_center nav__button top__button" data-target="contact">
 							<i class="fas fa-file-signature"></i>
-							<span class="nav__text"> request a quote
+							<span class="nav__text"> reach out
 							</span> </a>
 					</div>
 				</div>
@@ -118,17 +145,17 @@
 
 	<div class="mobile nav__menu_fullscreen">
 		<nav class="nav__menu_contents">
-			<a href="">
+			<a class="nav__button" data-target="clients">
 				<i class="fas fa-user-friends"></i>
 				<span class="nav__content-text nav__content-text_clients"> clients </span>
 			</a>
-			<a href="">
+			<a class="nav__button" data-target="services">
 				<i class="fas fa-people-carry"></i>
 				<span class="nav__content-text nav__content-text_services"> services </span>
 			</a>
-			<a href="">
+			<a class="nav__button" data-target="contact">
 				<i class="fas fa-file-signature"></i>
-				<span class="nav__content-text nav__content-text_quote"> request a quote </span> </a>
+				<span class="nav__content-text nav__content-text_quote"> reach out </span> </a>
 		</nav>
 
 		<nav class="nav__menu_connect">
@@ -163,18 +190,26 @@
 					</span>
 					<span> TO YOUR DOORSTEPS.</span>
 				</h1>
+				<p>
+					At Gardenmasters Manila, we  incorporate living nature
+					with contemporary urbania through meticulously designed landscaping
+					and gardening projects.
+				</p>
 			</div>
 
+			<span class="atf__headline_sub">
+			</span>
+
 			<div class="atf__button-set">
-				<div class="atf__button">
+				<div class="atf__button nav__button" data-target="services">
 					<span class="atf__button-text global_highlight_none">
 						WHAT WE DO ⇀
 					</span>
 				</div>
 
-				<div class="atf__button">
+				<div class="atf__button nav__button" data-target="contact">
 					<span class="atf__button-text global_highlight_none">
-						REQUEST A QUOTE ⇀
+						REACH OUT ⇀
 					</span>
 				</div>
 			</div>
@@ -184,17 +219,20 @@
 			<img src="images/atf__bottom-hedge.png">
 		</div>
 	</section>
+
+	<!-- CLIENTS
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 	<section class="clients">
 
-		<!-- Web header start
-		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-		<div class="clients__header">
-			<span class="clients__header_content global_highlight_none">
+		<!-- header -->
+		<div class="section__header">
+			<span class="section__header_content global_highlight_none">
 				<h1> Clients </h1>
 				<h2> Nurturing over 25 years of trust in and around the Philippines </h2>
 			</span>
 		</div>
 
+		<!-- clients list -->
 		<ul class="clients__list global_highlight_none">
 			<div class="clients__list_overlay">
 			</div>
@@ -388,10 +426,102 @@
 				</span>
 			</li>
 		</ul>
+	</section>
 
+
+	<!-- SERVICES
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<section class="services">
+
+		<!-- header -->
+		<div class="section__header">
+			<span class="section__header_content global_highlight_none">
+				<h1> Services </h1>
+				<h2> Bringing you your personal Garden of Eden </h2>
+			</span>
+		</div>
+
+		<div class="services__grid global_item_scroll" data-selected="1">
+			<div class="services__grid_nav global_highlight_none">
+				<div class="services__grid_nav_item" id="svcg__nav_item_1">
+					<i class="fas fa-seedling"></i>
+					<span class="services__nav_title"> Landscape Services </span>
+				</div>
+				<div class="services__grid_nav_item" id="svcg__nav_item_2">
+					<i class="fas fa-truck"></i>
+					<span class="services__nav_title"> Plant Supply and Delivery </span>
+				</div>
+				<div class="services__grid_nav_item" id="svcg__nav_item_3">
+					<i class="fas fa-inbox"></i>
+					<span class="services__nav_title"> Custom-built Planters </span>
+				</div>
+			</div>
+			<div class="services__grid_item">
+				<div class="services__grid_item_column">
+					<div data-image="lrg-1" class="services__grid_item_photo services__grid_item_photo_large">
+					</div>
+
+					<div class="services__grid_item_subrow">
+						<div data-image="sml-1" class="services__grid_item_photo services__grid_item_photo_small">
+						</div>
+						<div data-image="sml-2" class="services__grid_item_photo services__grid_item_photo_small">
+						</div>
+					</div>
+
+					<div data-image="lrg-2" class="services__grid_item_photo services__grid_item_photo_large">
+					</div>
+				</div>
+
+				<div class="services__grid_item_column">
+					<div class="services__grid_item_subrow">
+						<div data-image="sml-3" class="services__grid_item_photo services__grid_item_photo_small">
+						</div>
+						<div data-image="sml-4" class="services__grid_item_photo services__grid_item_photo_small">
+						</div>
+					</div>
+
+					<div data-image="lrg-3" class="services__grid_item_photo services__grid_item_photo_large">
+					</div>
+
+					<div class="services__grid_item_subrow">
+						<div data-image="sml-5" class="services__grid_item_photo services__grid_item_photo_small">
+						</div>
+						<div data-image="sml-6" class="services__grid_item_photo services__grid_item_photo_small">
+						</div>
+					</div>
+
+					<div class="services__grid_item_photo services__grid_item_banner">
+					</div>
+
+					</div>
+				</div>
+
+			</div>
 
 	</section>
 
+	<section class="contact global_highlight_none">
+		<div class="section__header contact__content">
+			<span class="section__header_content">
+				Have something in mind?
+				<h1 class="contact_email">
+				<span style="text-decoration: none;">📧</span>
+				<span><a href="mailto: hello@gardenmanila.com">hello@gardenmanila.com </a></span>
+				</h1>
+				Drop us an email and we'll be happy to talk to you about your project.
+			</span>
+			<br />
+			<div class="contact_footer">
+				<h1> You may also reach us at ⇀ </h1>
+
+				<div class="contact_footer_numbers">
+					<a href="tel: +632-800-7303" type="phone" target="_blank"><span> Tel: (+632) 800-7303 </span></a>
+					<a href="tel: +63915-358-3865" type="phone" target="_blank"><span> Cel: (+63915) 358-3865 </span></a>
+					<span class="copyright"> © Gardenmasters Manila, Inc. 🎨💻 meio velarde </span> 
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- End Document
 	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
