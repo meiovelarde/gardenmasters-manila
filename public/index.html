@@ -41,7 +41,7 @@
 	<div class="loader">
 		<img src="images/logo_loading.svg" width="150px" height="150px;" />
 
-		<!-- TODO: PRELOAD DEZE MOTHERFUCKERS (DUE MONDAY) <div class="preload">
+		<!-- TODO: PRELOAD DEZE MOTHERFUCKERS <div class="preload">
 			/images/clients/logos/bw/travellers.jpg
 			/images/clients/logos/color/travellers.jpg
 			/images/clients/project-pics/fuel-tank.jpg
@@ -81,17 +81,17 @@
 					</div>
 
 					<div class="nav__main_container global_flex_center">
-						<a href="" class="global_flex_center">
+						<a class="global_flex_center nav__button top__button" data-target="clients">
 							<i class="fas fa-user-friends"></i>
 							<span class="nav__text"> clients </span>
 						</a>
-						<a href="" class="global_flex_center">
+						<a class="global_flex_center nav__button top__button" data-target="services">
 							<i class="fas fa-people-carry"></i>
 							<span class="nav__text"> services </span>
 						</a>
-						<a href="" class="global_flex_center">
+						<a class="global_flex_center nav__button top__button" data-target="contact">
 							<i class="fas fa-file-signature"></i>
-							<span class="nav__text"> request a quote
+							<span class="nav__text"> reach out
 							</span> </a>
 					</div>
 				</div>
@@ -145,17 +145,17 @@
 
 	<div class="mobile nav__menu_fullscreen">
 		<nav class="nav__menu_contents">
-			<a href="">
+			<a class="nav__button" data-target="clients">
 				<i class="fas fa-user-friends"></i>
 				<span class="nav__content-text nav__content-text_clients"> clients </span>
 			</a>
-			<a href="">
+			<a class="nav__button" data-target="services">
 				<i class="fas fa-people-carry"></i>
 				<span class="nav__content-text nav__content-text_services"> services </span>
 			</a>
-			<a href="">
+			<a class="nav__button" data-target="contact">
 				<i class="fas fa-file-signature"></i>
-				<span class="nav__content-text nav__content-text_quote"> request a quote </span> </a>
+				<span class="nav__content-text nav__content-text_quote"> reach out </span> </a>
 		</nav>
 
 		<nav class="nav__menu_connect">
@@ -191,8 +191,8 @@
 					<span> TO YOUR DOORSTEPS.</span>
 				</h1>
 				<p>
-					Here at Gardenmasters Manila, we exist to incorporate living nature
-					with today's sprawling urbania through meticulously designed landscaping
+					At Gardenmasters Manila, we  incorporate living nature
+					with contemporary urbania through meticulously designed landscaping
 					and gardening projects.
 				</p>
 			</div>
@@ -201,15 +201,15 @@
 			</span>
 
 			<div class="atf__button-set">
-				<div class="atf__button">
+				<div class="atf__button nav__button" data-target="services">
 					<span class="atf__button-text global_highlight_none">
 						WHAT WE DO ⇀
 					</span>
 				</div>
 
-				<div class="atf__button">
+				<div class="atf__button nav__button" data-target="contact">
 					<span class="atf__button-text global_highlight_none">
-						REQUEST A QUOTE ⇀
+						REACH OUT ⇀
 					</span>
 				</div>
 			</div>
@@ -500,15 +500,26 @@
 
 	</section>
 
-	<section class="request-quote">
-		<div class="section__header">
-		<span class="section__header_content">
-			Have something in mind?
-			<h1>
-			<a href="mailto: hello@gardenmanila.com"> Request a Quote </a>
-			</h1>
-			Drop us an email and we'll be happy to talk to you about your project.
-		</span>
+	<section class="contact global_highlight_none">
+		<div class="section__header contact__content">
+			<span class="section__header_content">
+				Have something in mind?
+				<h1 class="contact_email">
+				<span style="text-decoration: none;">📧</span>
+				<span><a href="mailto: hello@gardenmanila.com">hello@gardenmanila.com </a></span>
+				</h1>
+				Drop us an email and we'll be happy to talk to you about your project.
+			</span>
+			<br />
+			<div class="contact_footer">
+				<h1> You may also reach us at ⇀ </h1>
+
+				<div class="contact_footer_numbers">
+					<a href="tel: +632-800-7303" type="phone" target="_blank"><span> Tel: (+632) 800-7303 </span></a>
+					<a href="tel: +63915-358-3865" type="phone" target="_blank"><span> Cel: (+63915) 358-3865 </span></a>
+					<span class="copyright"> © Gardenmasters Manila, Inc. 🎨💻 meio velarde </span> 
+				</div>
+			</div>
 		</div>
 	</section>
 	<!-- End Document

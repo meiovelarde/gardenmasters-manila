@@ -45,6 +45,7 @@ export const M_ATF = {
 
 		checkWidth();
 		window.onresize = handleResize;
+		window.addEventListener('resize', handleResize);
 		window.addEventListener('sizemodechange', handleResize);
 	}
 }

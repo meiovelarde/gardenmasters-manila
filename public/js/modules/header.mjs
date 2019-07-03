@@ -36,6 +36,10 @@ export const M_HEADER = {
       }
     }
     document.querySelector('.nav__menu').onclick = clickMenu;
+    let navItems = document.querySelectorAll('.nav__menu_fullscreen .nav__button');
+    for(let i = 0; i < navItems.length; i++){
+      navItems[i].addEventListener('mousedown', clickMenu)
+    }
   }
 }
 export default M_HEADER;

@@ -7,7 +7,7 @@ export const M_ANIMS = {
 		const scrollables = [
 			'.services .section__header_content',
 			'.clients  .section__header_content',
-			'.request-quote .section__header_content'
+			'.contact .section__header_content'
 		]
 
 		var animateVisibleScrollable = () => {

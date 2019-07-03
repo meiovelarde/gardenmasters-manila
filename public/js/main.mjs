@@ -3,6 +3,7 @@ import M_CLIENTS from './modules/clients.mjs';
 import M_HEADER from './modules/header.mjs';
 import M_SERVICES from './modules/services.mjs';
 import M_ANIMS from './modules/animations.mjs';
+import M_NAV from './modules/navigation.mjs';
 
 const main = {
   init(){
@@ -23,6 +24,7 @@ const main = {
       M_CLIENTS.init();
       M_HEADER.init();
       M_ANIMS.init();
+      M_NAV.init();
     }
     window.addEventListener('load', () => {
       document.body.classList.add('loaded');

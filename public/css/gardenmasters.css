@@ -1,4 +1,4 @@
-/* Prelloader
+/* Preloader
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .loader {
   position: fixed;
@@ -56,6 +56,7 @@ body {
 a {
   color: #202020;
   text-decoration: none;
+  cursor: pointer;
   transition: none;
 }
 
@@ -400,7 +401,7 @@ a:hover {
 /* Mobile - Nav menu overlay */
 .nav__menu_fullscreen,
 .nav__menu_fullscreen.active {
-  background-color: #00c2ac;
+  background-color: #97c900;
   height: 100%;
   left: 0;
   overflow-x: hidden;
@@ -1527,21 +1528,89 @@ a:hover {
   transition-delay: 750ms
 }
 
-.request-quote .section__header{
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+.contact .section__header{
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-color: #97c900;
+}
+
+.contact .section__header_content{
+  width: 100%;
+  max-width: 100%;
 }
 
 .section__header_content a{
-  color: #97c900;
-  transition: opacity .25s ease-out
+  color: white;
+  transition: color .25s ease-out;
 }
 
-.section__header_content a:hover{
-  opacity: .4;
+.contact a{
+  text-decoration: underline dotted;
+  text-transform: lowercase;
 }
+
+.contact:not(h1){
+  font-weight: 600;
+}
+
+.contact_footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between
+}
+
+.contact_footer h1,
+.contact_footer_numbers {
+  width: 100%;
+}
+
+.contact_footer h1{
+  margin: 0;
+}
+
+.contact_footer_numbers{
+  display: flex;
+  flex-flow: column;
+  padding: 0 12px;
+}
+
+.contact_footer_numbers span{
+  font-weight: 500;
+}
+
+.contact_footer_numbers a{
+  font-weight: 700;
+  color: white;
+}
+
+.section__header_content a:hover,
+.contact_footer_numbers a:hover{
+  color: #C90097;
+}
+
+@media(max-width: 750px){
+  .section__header_content h1.contact_email,
+  .contact_footer h1 {
+    font-size: 3rem;
+  }
+}
+
+@media(max-width: 550px){
+  .section__header_content h1.contact_email,
+  .contact_footer h1 {
+    font-size: 2.35rem;
+  }
+  .contact:not(h1){
+    font-size: 1.25rem;
+  }
+}
+
+.contact_footer_numbers .copyright{
+  font-size: 1.15rem;
+}
+
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
