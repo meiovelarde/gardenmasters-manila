@@ -56,10 +56,21 @@ export let M_CLIENTS = {
 			x = e.clientX;
 			y = e.clientY;
 		}
-
-		window.addEventListener('touchstart', touch);
-		window.addEventListener('touchmove', touch);
-		window.addEventListener('mousemove', mousemove);
+    let setupListeners = () => {
+      console.log(S_isMobile())
+      if (!S_isMobile()){
+        window.addEventListener('touchstart', touch);
+        window.addEventListener('touchmove', touch);
+        window.addEventListener('mousemove', mousemove);
+      } else {
+        window.removeEventListener('touchstart', touch);
+        window.removeEventListener('touchmove', touch);
+        window.removeEventListener('mousemove', mousemove);
+      }
+    }
+    setupListeners();
+    window.addEventListener('resize', setupListeners)
+    window.addEventListener('sizemodechange', setupListeners)
 		requestAnimationFrame(renderCursor);
 
 		const computeCursorPos = () => {
