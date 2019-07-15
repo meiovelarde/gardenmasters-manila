@@ -21,7 +21,7 @@ export const M_SERVICES = {
 
 		let populateGrid = () => {
 			const SCREEN_RES = S_getScreenRes();
-			const BREAKPOINTS = [400, 550, 750, 1000, 1200, 1600];
+			const BREAKPOINTS = [320, 550, 750, 1000, 1200, 1600];
 			const SERVICE_CATEGORIES = ['lscape-svc', 'plant-supply', 'planters']
 			const IMAGE_CATEGORIES = ['ban',
 				'lrg-1', 'lrg-2', 'lrg-3',
@@ -48,7 +48,7 @@ export const M_SERVICES = {
 				return tags;
 			}
 
-			let selectedBreak = 350;
+			let selectedBreak = 320;
 			for (let i = 0; i < BREAKPOINTS.length; i++) {
 				if (SCREEN_RES.x > BREAKPOINTS[i])
 					selectedBreak = BREAKPOINTS[i];
