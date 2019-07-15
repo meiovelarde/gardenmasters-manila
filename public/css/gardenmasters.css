@@ -1751,6 +1751,34 @@ h1.contact_you-may-also {
   }
 }
 
+/* Back to top */
+.button_to-top {
+  border: 1px black solid;
+  bottom: 32px;
+  color: black;
+  font-size: 3.5rem;
+  height: 64px;
+  line-height: 5.6rem;
+  opacity: 0;
+  position: fixed;
+  right: 64px;
+  text-align: center;
+  transform: rotate(90deg);
+  width: 64px;
+  z-index: 2;
+  transition: opacity .2s ease-in-out, color .25s ease-in-out, border-color .25s ease-in-out;
+}
+
+.button_to-top[data-is-active="true"] {
+  opacity: 1;
+}
+
+.button_to-top[data-is-active="true"][data-is-touch="false"]:hover {
+  border-color: #c3ff00;
+  color: #c3ff00;
+  cursor: pointer;
+}
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
