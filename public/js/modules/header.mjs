@@ -1,5 +1,16 @@
+import { S_isMobile } from './shared.mjs';
 export const M_HEADER = {
   init() {
+    const setupTouch = () => {
+      const header = document.querySelector('header.mobile');
+      if(S_isMobile())
+        header.dataset.isTouch = 'true'
+      else header.dataset.isTouch = 'false'
+    }
+
+    setupTouch();
+    window.addEventListener('resize', setupTouch)
+    window.addEventListener('sizemodechange', setupTouch)
     // Hide logo text when scrolling
     let logoTextIsClosed = false;
     const hideLogoText = () => {

@@ -114,8 +114,7 @@ export const M_SERVICES = {
 							resolve();
 						}
 					}
-					GRID_PHOTOS[i].onerror = (e) => {
-						console.log(e)
+					GRID_PHOTOS[i].onerror = () => {
 						reject();
 					}
 				}))

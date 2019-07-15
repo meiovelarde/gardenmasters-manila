@@ -57,7 +57,6 @@ export let M_CLIENTS = {
 			y = e.clientY;
 		}
     let setupListeners = () => {
-      console.log(S_isMobile())
       if (!S_isMobile()){
         window.addEventListener('touchstart', touch);
         window.addEventListener('touchmove', touch);
