@@ -1,10 +1,10 @@
-# Meio's cutest JS entry point boilerplate
-- NodeJS based web app entry point
+# Gardenmasters Manila Site Files
+- For portfolio code review
+- Developed web-first, best viewed Web 1360x768
+- In progress: UI ATF bugs on Mobile
 
-## Boilerplate components and links for the super cute
-  - Skeleton CSS Boilerplate: [http://getskeleton.com/]
-  - ExpressJS: [https://expressjs.com/en/api.html]
-  - Git initialization tutorial: [https://kbroman.org/github_tutorial/pages/init.html]
+# Install instructions
+(from https://github.com/meiovelarde/cutest-boilerplate)
 
 ## Install pre-requisites:
   - npm >= 6.4.1
