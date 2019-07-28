@@ -3,7 +3,9 @@
 - Developed web-first, best viewed Web 1360x768
 - In progress: UI ATF bugs on Mobile
 
-# Install instructions (from https://github.com/meiovelarde/cutest-boilerplate)
+# Install instructions
+(from https://github.com/meiovelarde/cutest-boilerplate)
+
 ## Install pre-requisites:
   - npm >= 6.4.1
   - nodejs >= 10.15.0
